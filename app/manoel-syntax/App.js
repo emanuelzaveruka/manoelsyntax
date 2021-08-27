@@ -1,21 +1,27 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Text, View, StyleSheet, SafeAreaView, StatusBar,TouchableOpacity, FlatList } from 'react-native';
+import { Text, View, StyleSheet, SafeAreaView, StatusBar,TouchableOpacity, FlatList, Modal } from 'react-native';
 import Constants from 'expo-constants';
 import { Ionicons } from '@expo/vector-icons';
 import TaskList from './src/components/TaskList/index';
+import * as Animatable from 'react-native-animatable';
+
 // You can import from local files 
 import AssetExample from './components/AssetExample';
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 export default function App() { //criação de componente
+
+const AnimatedBtn = Animatable.createAnimatableComponent(TouchableOpacity);
+
 const [task, setTask] = useState([
   {key: 1, task: 'teste'},
   {key: 2, task: 'teste'},
   {key: 3, task: 'teste'},
   {key: 4, task: 'teste'},
 ]);
+const [open, setOpen] = useState (false);
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#E5E5E5" barStyle="dark-content" />
@@ -32,9 +38,24 @@ const [task, setTask] = useState([
           de "toque de botão"
         */
       }
-      <TouchableOpacity style={styles.fab}> 
+      <Modal animationType="slide" transparent={false} visible={open}>
+      <SafeAreaView style={styles.modal}>
+        <View>
+        <TouchableOpacity onPress={ () => setOpen(false)}>
+        <Ionicons name="md-arrow-back" size={40} color="#000"/>
+        </TouchableOpacity>
+        </View>          
+      </SafeAreaView>
+      </Modal>
+      <AnimatedBtn 
+      style={styles.fab}
+      useNativeDriver
+      animation="bounceInUp"
+      duration={1500}
+      onPress={ () =>  setOpen(true)}
+      > 
         <Ionicons name="ios-add" size={50} color="#FFF"/>
-      </TouchableOpacity>
+      </AnimatedBtn>
 
       <FlatList /* Criação da lista */
       marginHorizontal={10} /*Uma definição de margem dentro do flatlist*/
