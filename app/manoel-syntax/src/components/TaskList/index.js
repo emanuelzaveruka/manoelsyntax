@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     }
   },
   task:{
-    color: '#121212',
+    color: '#27235F',
     fontSize: 30,
     marginTop: 0,
     paddingLeft: 20,
