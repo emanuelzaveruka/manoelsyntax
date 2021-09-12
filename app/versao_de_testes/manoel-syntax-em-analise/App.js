@@ -32,6 +32,7 @@ export default function App() {
     { key: 3, task: 'teste' },
     { key: 4, task: 'teste' },
   ]);
+  
   const [open, setOpen] = useState(false);
   return (
     <SafeAreaView style={styles.container}>
@@ -41,6 +42,7 @@ export default function App() {
           <Ionicons name="md-arrow-back" size={60} color="#fff" />
         </TouchableOpacity>
       </View>
+
       {/*.fab é a estilização de imagem e algumas funções
           Iosicons é a chama da biblioteca de imagens
             e que em seguidade eu defino o tamanho e a cor
