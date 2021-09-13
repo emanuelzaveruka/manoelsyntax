@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montseerat", sans-serif;
+}
+.center {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2%;
+  display: flex;
+}
+
+header{
+  background-color: #266AE7;
+  padding: 20px 0;
+}
+/*Essa sera a propriedade da imagem*/
+.logo h2{
+  font-weight: normal;
+  font-size: 18px;
+}
+.logo{
+  color: aliceblue;
+}
+.menu{
+  width: 80%;
+  text-align: left;
+}
+/*Classe dos link em analise*/
+.menu a{
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 20px;
+  transition: 750ms;
+}
+.menu a:hover{
+  color: aqua;
+}
+
+/*Classe do botão*/
+.menu .btn-menu{
+  background-color: aliceblue;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 40px;
+}
+
+.menu .btn-menu:hover{
+  background-color: rgb(52, 175, 175);
+  color: black;
+}
+
+/*<--- SECTION MAIN ---> */
+
+section.main{
+  /*background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; SERIA PARA ALGUMA IMAGEM de fundo*/
+  background-color: #F5F5F5;
+}
