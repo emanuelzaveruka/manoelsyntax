@@ -12,6 +12,7 @@
   margin: 0 auto;
   padding: 0 2%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 header{
@@ -44,6 +45,15 @@ header{
 }
 
 /*Classe do botão*/
+.btn{
+  background-image: url("images/arrow-left-solid.svg");
+  background-repeat: no-repeat;
+  background-color: #266AE7;
+  padding: 12px 29px;
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+}
 .menu .btn-menu{
   background-color: aliceblue;
   display: inline-block;
@@ -59,9 +69,57 @@ header{
 /*<--- SECTION MAIN ---> */
 
 section.main{
-  /*background-position: center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; SERIA PARA ALGUMA IMAGEM de fundo*/
+  background-attachment: fixed;
   background-color: #F5F5F5;
+}
+
+/*centro ou imagem no centro EM ANALISE*/
+
+.main__cta{
+  width: 100%;
+  margin:60px;
+  text-align: center;
+}
+
+.main__cta_h2{
+  color: #F5F5F5;
+font-size: 40px;
+}
+.main__cta p{
+  color: gray;
+  font-size: 18px;
+  margin: 10px 0;
+
+}
+
+
+/*FIM DE SEÇÃO EM ANALISE*/
+
+/*SECÇÃO DE BOTÕES*/
+
+.diferenciais{
+  display: flex;
+  background-color: #266AE7;
+  width: 100%;
+  margin:60px;
+  text-align: center;
+}
+.puts{
+  width: 100%;
+  text-align: center;
+}
+.puts p{
+  font-size: 40px;
+}
+.puts button{
+  background-color: aliceblue;
+  display: inline-block;
+  padding: 15%;
+  margin:15px;
+  border-radius: 300px;
+  border: 0;
+  cursor: pointer;
 }
