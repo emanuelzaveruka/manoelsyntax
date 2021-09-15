@@ -45,11 +45,13 @@ header{
 }
 
 /*Classe do botão*/
+
 .btn{
-  background-image: url("images/arrow-left-solid.svg");
+  background-image: url("../images/arrow-left-solid.svg");
+  color-interpolation-filters: linearRGB;
   background-repeat: no-repeat;
-  background-color: #266AE7;
-  padding: 12px 29px;
+  background-color:white;
+  padding: 20px 20px;
   border-radius: 40px;
   border: 0;
   cursor: pointer;
@@ -89,6 +91,7 @@ section.main{
 font-size: 40px;
 }
 .main__cta p{
+  word-break: inherit;
   color: gray;
   font-size: 18px;
   margin: 10px 0;
@@ -99,6 +102,24 @@ font-size: 40px;
 /*FIM DE SEÇÃO EM ANALISE*/
 
 /*SECÇÃO DE BOTÕES*/
+.flat{
+  width: 100%;
+  text-align: center;
+}
+.flat p{
+  font-size: 305%;
+}
+.flat button{
+  background-color: aliceblue;
+  display: inline-block;
+  padding: 30px 100px;
+  width: 50%;
+  border-radius: 200px;
+  margin:15px;
+  border: 0;
+  cursor: pointer;
+}
+
 
 .diferenciais{
   display: flex;
