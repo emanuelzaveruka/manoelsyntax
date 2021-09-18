@@ -10,38 +10,26 @@
 .center {
   width: 100%;
   margin: 0 auto;
-  padding: 0 2%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  background-color: #266AE7;
+  justify-content: space-between;
 }
 
-header{
-  background-color: #266AE7;
-  padding: 20px 0;
-}
-/*Essa sera a propriedade da imagem*/
-.logo h2{
-  font-weight: normal;
-  font-size: 18px;
-}
-.logo{
-  color: aliceblue;
+
+.logo img{
+  max-width: 1080px;   /* Máximo da largura da imagem */
+  width: 50%;
+  max-height: 200px;  /* Máximo da altura da imagem */
+  min-height: auto;      /* Mínimo da altura, por padrão “auto” */
+  background-size:100%;
+  background-repeat: no-repeat;
+  float: right;
 }
 .menu{
-  width: 80%;
   text-align: left;
-}
-/*Classe dos link em analise*/
-.menu a{
-  color: black;
-  font-size: 14px;
-  text-decoration: none;
-  display: inline-block;
-  margin-left: 20px;
-  transition: 750ms;
-}
-.menu a:hover{
-  color: aqua;
 }
 
 /*Classe do botão*/
@@ -51,6 +39,7 @@ header{
   color-interpolation-filters: linearRGB;
   background-repeat: no-repeat;
   background-color:white;
+  margin-left: 25px;
   padding: 20px 20px;
   border-radius: 40px;
   border: 0;
@@ -106,10 +95,6 @@ font-size: 40px;
 
 .flat{
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 0;
-  align-items: center;
   text-align: center;
 }
 .flat a{
@@ -121,26 +106,62 @@ font-size: 40px;
   flex-direction: column;
   justify-content: center;
   display: flex;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 2%;
 }
 .flat li{
-align-items: center;
-display: flex;
-flex-direction: row;
-justify-content: center;
-  list-style-type: none;
   background-color: #C6D1E8;
-  padding: 30px 300px;
+  display: inline-block;
   width: 100%;
-  height: 20%;
-  border-radius: 200px;
-  margin-top:15px;
+  padding: 4%;
+  margin-top: 1%;
+  border-radius: 300px;
   border: 0;
   cursor: pointer;
+}
+.flat p{
+  font-size: 45px;
+  color: #27235F;
+}
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+.flat  p{
+      font-size: 45px;
+  }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.flat  p{
+      font-size: 40px;
+  }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+ .flat p{
+      font-size: 40px;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.flat  p{
+      font-size: 30px;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+.flat  p{
+      font-size: 20px;
+  }
 }
 
 
 .diferenciais{
-  display: flex;
+  display: inline-block;
   background-color: #266AE7;
   width: 100%;
   margin:60px;
@@ -150,16 +171,50 @@ justify-content: center;
   width: 100%;
   text-align: center;
 }
-.puts p{
-  font-size: 40px;
-  color: #27235F;
-}
 .puts button{
   background-color: #C6D1E8;
-  display: inline-block;
-  padding: 15%;
+  padding: 7% 6% ;
   margin:15px;
   border-radius: 300px;
   border: 0;
   cursor: pointer;
+}
+.puts p{
+	font-size: 3.25em;
+  color: #27235F;
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+.puts  p{
+      font-size: 45px;
+  }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.puts  p{
+      font-size: 40px;
+  }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+ .puts p{
+      font-size: 40px;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.puts  p{
+      font-size: 30px;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+.puts  p{
+      font-size: 20px;
+  }
 }

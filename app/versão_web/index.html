@@ -4,40 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar</title>
-  <link rel="stylesheet" href="StylesSheet/styles.css">
+  <link rel="stylesheet" href="StylesSheet/styles.css" >
+  <title>Manoel-Syntax</title>
+
 </head>
   <body>
-      <header> <!--incio do header-->
-        <div class="center">
+      <div class="center">
+          <div class="menu"><!--menu-->
             <div class="menu"><!--menu-->
-              <a class="btn-menu" href="#"> <!--botao-->
-                Rewiew
-              </a>
+              <button class="btn" onclick="goBack()"></button>
+            </div><!--botao dentro do menu-->
             </div><!--botao dentro do menu-->
             <div class="logo"><!--logo-->
-              <h2> Manoel Syntax</h2><!--seria o img-->
+              <img src="images/Manoel-Syntax.png">
             </div>
-        </div>
-      </header><!--finalização de header-->
-      <!--Inicio de main--><!--
-    <section clas="main">
-      <div class="center">
-        <div class="main__cta">
-          <h1>html111</h1>
-          <p>   Html</p>
-        </div>  -main center
-        <div class="diferenciais">
-          <div class="diferencial-single">
-            <p>HTML</p>
-          </div>
       </div>
-    -->
+    <section>
       <div class="puts">
         <form action="telas/flat_Html.html">
           <button  > <p>Html</p></button>
       </form>
+      <form action="telas/flat_Html.html">
+        <button  > <p>Html</p></button>
+    </form>
       </div>
-    </section>
+      </section>
+    <script>
+      function goBack() {
+          window.history.back()
+      }
+      </script>
   </body>
 </html>
