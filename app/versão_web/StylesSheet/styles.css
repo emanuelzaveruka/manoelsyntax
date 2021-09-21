@@ -159,22 +159,28 @@ font-size: 40px;
   }
 }
 
-
-.diferenciais{
-  display: inline-block;
-  background-color: #266AE7;
+/*  SECTION MAIN*/
+.sectionmain{
   width: 100%;
-  margin:60px;
   text-align: center;
 }
+
+/*  SECTION MAIN*/
+
+/*<--  Botoes do Index  -->*/
+
 .puts{
-  width: 100%;
-  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  margin-right: 250px;
+  margin-left:250px;
+  margin-top: 2%;
 }
 .puts button{
   background-color: #C6D1E8;
-  padding: 7% 6% ;
-  margin:15px;
+  width: 200px;
+  height: 200px;
   border-radius: 300px;
   border: 0;
   cursor: pointer;
@@ -183,6 +189,45 @@ font-size: 40px;
 	font-size: 3.25em;
   color: #27235F;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .puts {
+    margin-right: 150px;
+    margin-left:150px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .puts{
+      margin-right: 50px;
+      margin-left:50px;
+     }
+   }
+   
+   /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+   @media only screen and (min-width: 480px) and (max-width: 767px) {
+   .puts {
+      margin-right: 50px;
+      margin-left:50px;
+     }
+   }
+   
+   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+   @media only screen and (max-width: 479px) {
+   .puts {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     }
+   }
+   @media only screen and (max-width: 479px) {
+    .puts button {
+      margin-top: 25px;
+    }
+    }
+
+   
+
+/* Media Ony da tag p do puts*/
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
