@@ -27,12 +27,20 @@
   background-size:100%;
   background-repeat: no-repeat;
   float: right;
+  opacity: 1.0; /*esta linha é a que clareia a imagem*/
+  cursor: pointer;
 }
+ .logo img:hover{
+  opacity: 0.8; /*esta linha é a que escurece a imagem*/
+  }
 .menu{
   text-align: left;
 }
 
 /*Classe do botão*/
+.input{
+  display:none
+}
 
 .btn{
   background-image: url("../images/arrow-left-solid.svg");
@@ -60,39 +68,116 @@
 /*<--- SECTION MAIN ---> */
 
 section.main{
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #F5F5F5;
+  min-height: 800px;
+  background: #F5F5F5;
+  /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+  flex: 2 1 70%;
+  padding: 3px;
 }
 
-/*centro ou imagem no centro EM ANALISE*/
+/*centro ou imagem no centro*/
+/*COTAINER FLEX DE REVIEW*/
+#flexContainereview {
+  display: flex;
+  flex-direction: column;
+  }
+/*COTAINER FLEX DE REVIEW*/
 
-.main__cta{
-  margin:60px;
-  text-align: left;
-  word-wrap: break-word
+  /*FORMULARIO*/
+
+.formcontainer {
+  width: 50%;
+  margin: 0 auto;
 }
 
-.main__cta h2{
-  color: #27235F;
-font-size: 40px;
+.form-contact {
+  width: 100%;
+  font-family: "Arial", Times, serif;
 }
-.main__cta p{
-  word-break: inherit;
-  color: #000;
+
+.form-contact-input {
+  width: 100%;
+  color: #292929;
   font-size: 18px;
-  margin: 10px 0;
-
+  background-color: #E9E9E9;
+  border: 1px solid #E9E9E9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-indent: 20px;
 }
 
+.form-contact-textarea {
+  width: 100%;
+  color: #292929;
+  font-size: 18px;
+  background-color: #E9E9E9;
+  border: 1px solid #E9E9E9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 200px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-indent: 20px;
+  padding-top: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "Arial", Times, serif;
+}
 
-/*FIM DE SEÇÃO EM ANALISE*/
+.form-contact-button {
+  width: 100%;
+  font-size: 18px;
+  border-radius: 4px;
+  color: #fff;
+  height: 40px;
+  opacity: .8;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: #B22222;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #500707;
+  border-right: 1px solid #500707;
+  transition: 1s;
+}
+
+.form-contact-button:hover {
+  opacity: 1;
+}
+/*FORMULARIO*/
+/*SEÇÃO DE FLATSINTAXES*/
+#flexContainer {
+  display: flex;
+  }
+
+  nav {
+  background: #F5F5F5;
+  /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+  flex: 1 1 15%;
+  min-width: 150px;
+  padding: 3px;
+  border-right:solid  3px;
+  border-color: #C6D1E8;
+  }
+
+  #content {
+    min-height: 800px;
+    background: #F5F5F5;
+    /* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
+    flex: 2 1 70%;
+    padding: 3px;
+  }
+/*SEÇÃO DE FLATSINTAXES*/
+
 
 /*SECÇÃO DE BOTÕES*/
-
-
 .flat{
   width: 100%;
   text-align: center;

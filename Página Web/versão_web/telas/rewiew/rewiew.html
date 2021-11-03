@@ -7,7 +7,7 @@
   <title>Navbar</title>
   <link rel="stylesheet" href="../../StylesSheet/styles.css">
 </head>
-  <body>
+  <body bgcolor="#F5F5F5">
       <header> <!--incio do header-->
         <div class="center">
             <div class="menu"><!--menu-->
@@ -20,22 +20,20 @@
               </div>
         </div>
       </header>
-      <section>
-        <div class="flat">
-        <ul>
-            <a href="SintaxesHtml/flatsintaxe.html">
-              <li> <p>Sintaxes</p></li> 
-            </a>
-            <a href="">
-              <li> <p>asdasdasd</p></li> 
-            </a>
-            <a href="SintaxesHtml/flatsintaxe.html">
-              <li> <p>asdasdasd</p></li> 
-            </a>
-        </ul>
+      <section id="flexContainereview">
+        <div class="logo"><!--logo-->
+        <img src="../../images/Manoel-Syntax-roxo.png">
         </div>
-        </section>
-    
+        <div class="formcontainer">
+          <form action="#" class="form-contact" method="post" tabindex="1">
+            <input type="text" class="form-contact-input" name="nome" placeholder="Nome" required />
+            <input type="email" class="form-contact-input" name="email" placeholder="Email" required />
+            <textarea class="form-contact-textarea" name="conteudo" placeholder="Deixe uma mensagem" required></textarea>
+            <button type="submit" class="form-contact-button">Enviar</button>
+          </form>
+        </div>
+      </section>
+
       <script>
         function goBack() {
             window.history.back()

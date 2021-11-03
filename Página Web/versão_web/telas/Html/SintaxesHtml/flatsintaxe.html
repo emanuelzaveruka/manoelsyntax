@@ -6,37 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navbar</title>
   <link rel="stylesheet" href="../../../StylesSheet/styles.css">
+  <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
+  <style>
+
+  </style>
 </head>
   <body>
       <header> <!--incio do header-->
         <div class="center">
             <div class="menu"><!--menu-->
-              <div class="menu"><!--menu-->
+              
                 <button class="btn" onclick="goBack()"></button>
-              </div><!--botao dentro do menu-->
-              </div><!--botao dentro do menu-->
+              
+            </div><!--botao dentro do menu-->
               <div class="logo"><!--logo-->
                 <img src="../../../images/Manoel-Syntax.png">
               </div>
         </div>
       </header>
-      <section>
-        <div class="flat">
-        <ul>
-            <a href="SIN/p.html">
-              <li> <p>< p ></p></li> 
-            </a>
-            <a href="SintaxesHtml/flatsintaxe.html">
-              <li> <p>< html ></p></li> 
-            </a>
-            <a href="SintaxesHtml/flatsintaxe.html">
-              <li> <p>< body ></p></li> 
-            </a>
-        </ul>
-        </div>
+      <section id="flexContainer">
+        <nav>
+              <input class="input" id="p" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
+              <label for="p">
+              <div class="flat">
+                <ul>
+                  <a>
+                    <li> <p>< p ></p></li> 
+                  </a>
+                </ul>
+              </div>
+              </label>
+              <input class="input" id="html" type="button" name="radiobutton" value="B" onclick = "populateData(event)">
+              <label for="html">
+                <div class="flat">
+                  <ul>
+                    <a>
+                      <li> <p>< html ></p></li> 
+                    </a>
+                  </ul>
+                </div>
+                </label>
+              <input class="input" id="body" type="button" name="radiobutton" value="C" onclick = "populateData(event)">
+              <label for="body">
+                <div class="flat">
+                  <ul>
+                    <a>
+                      <li> <p>< p ></p></li> 
+                    </a>
+                  </ul>
+                </div>
+              </label>
+        </nav>
+        <section id="content">
         </section>
-    
+      </section>
       <script>
+var targetDiv = document.getElementById('content');
+    var htmlContent = '';
+
+    function populateData(event){
+      switch(event.target.value){
+        case '1':{
+         htmlContent = 'Content for A';
+          break;
+        }
+        case 'B':{
+          htmlContent = "content for B";
+break;
+        }
+        case 'C':{
+          htmlContent = "content for C";
+break;
+        }
+      }
+      targetDiv.innerHTML = htmlContent;
+    }
         function goBack() {
             window.history.back()
         }

@@ -1,0 +1,22 @@
+.main__cta{
+    margin:60px;
+    text-align: left;
+    word-wrap: break-word;
+    display: none;
+  }
+  
+  .main__cta h2{
+    color: #27235F;
+    font-size: 40px;
+    
+  }
+  .main__cta p{
+    word-break: inherit;
+    color: #000;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  #check{
+      display:none
+  }
+  /*FIM DE SEÇÃO*/
