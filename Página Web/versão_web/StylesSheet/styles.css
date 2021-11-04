@@ -76,11 +76,46 @@ section.main{
 }
 
 /*centro ou imagem no centro*/
-/*COTAINER FLEX DE REVIEW*/
-#flexContainereview {
+/*alinhamentos de texto no site*/
+.containertexto{
   display: flex;
-  flex-direction: column;
-  }
+  flex-direction: row;
+}
+.containertextodireita{
+  display: flex;
+  justify-content: flex-end;
+}
+.textalignright{
+  margin-left: 50px;
+  max-width: 100vw;
+  width:350px;
+  text-align: right;
+}
+.textalignleft{
+  max-width: 100vw;
+  width:350px;
+  text-align: left;
+}
+/*alinhamentos de texto no site*/
+/*imagem de logo do review*/
+.logoroxa img{
+  align-self: center;
+  max-width: 60%;   /* Máximo da largura da imagem */
+  max-height: 25%;  /* Máximo da altura da imagem */
+  min-height: auto;      /* Mínimo da altura, por padrão “auto” */
+  background-size:100%;
+  background-repeat: no-repeat;
+  opacity: 1.0; /*esta linha é a que clareia a imagem*/
+  cursor: pointer;
+}
+/*imagem de logo do review*/
+/*COTAINER FLEX DE REVIEW*/
+  .flexContainereviewtwo {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+    }
 /*COTAINER FLEX DE REVIEW*/
 
   /*FORMULARIO*/
@@ -99,15 +134,10 @@ section.main{
   width: 100%;
   color: #292929;
   font-size: 18px;
-  background-color: #E9E9E9;
-  border: 1px solid #E9E9E9;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  background-color: #F5F5F5;
+  border: 1px solid #27235F;
   height: 40px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc;
   text-indent: 20px;
 }
 
@@ -115,15 +145,10 @@ section.main{
   width: 100%;
   color: #292929;
   font-size: 18px;
-  background-color: #E9E9E9;
-  border: 1px solid #E9E9E9;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  background-color: #F5F5F5;
+  border: 1px solid #27235F;
   height: 200px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc;
   text-indent: 20px;
   padding-top: 16px;
   padding-left: 0;
@@ -134,17 +159,15 @@ section.main{
 .form-contact-button {
   width: 100%;
   font-size: 18px;
-  border-radius: 4px;
-  color: #fff;
+  border-radius: 15px;
+  color: #27235F;
   height: 40px;
   opacity: .8;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 50%;
   cursor: pointer;
-  background: #B22222;
-  display: block;
-  border: none;
-  border-bottom: 1px solid #500707;
-  border-right: 1px solid #500707;
+  background-color: #F5F5F5;
+  border: 1px solid #27235F;
   transition: 1s;
 }
 
