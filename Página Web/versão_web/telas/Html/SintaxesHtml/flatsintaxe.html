@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar</title>
-  <link rel="stylesheet" href="../../../StylesSheet/styles.css">
-  <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
-  <style>
-
-  </style>
-</head>
-  <body>
-      <header> <!--incio do header-->
-        <div class="center">
-            <div class="menu"><!--menu-->
-              
-                <button class="btn" onclick="goBack()"></button>
-              
-            </div><!--botao dentro do menu-->
-              <div class="logo"><!--logo-->
-                <img src="../../../images/Manoel-Syntax.png">
-              </div>
-        </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Navbar</title>
+      <link rel="stylesheet" href="../../../StylesSheet/styles.css">
+      <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
+      <style>
+      </style>
+   </head>
+   <body>
+      <header>
+         <!--incio do header-->
+         <div class="center">
+            <div class="menu">
+               <!--menu-->
+               <button class="btn" onclick="goBack()"></button>
+            </div>
+            <!--botao dentro do menu-->
+            <div class="logo">
+               <!--logo-->
+               <img src="../../../images/Manoel-Syntax.png">
+            </div>
+         </div>
       </header>
       <section id="flexContainer">
-        <nav>
-              <input class="input" id="p" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
-              <label for="p">
-              <div class="flat">
-                <ul>
-                  <a>
-                    <li> <p>< p ></p></li> 
-                  </a>
-                </ul>
-              </div>
-              </label>
-              <input class="input" id="html" type="button" name="radiobutton" value="B" onclick = "populateData(event)">
-              <label for="html">
-                <div class="flat">
+         <nav>
+            <input class="input" id="p" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
+            <label for="p">
+               <div class="flat">
                   <ul>
-                    <a>
-                      <li> <p>< html ></p></li> 
-                    </a>
+                     <a>
+                        <li>
+                           <p>< p ></p>
+                        </li>
+                     </a>
                   </ul>
-                </div>
-                </label>
-              <input class="input" id="body" type="button" name="radiobutton" value="C" onclick = "populateData(event)">
-              <label for="body">
-                <div class="flat">
+               </div>
+            </label>
+            <input class="input" id="html" type="button" name="radiobutton" value="2" onclick = "populateData(event)">
+            <label for="html">
+               <div class="flat">
                   <ul>
-                    <a>
-                      <li> <p>< p ></p></li> 
-                    </a>
+                     <a>
+                        <li>
+                           <p>< html ></p>
+                        </li>
+                     </a>
                   </ul>
-                </div>
-              </label>
-        </nav>
-        <section id="content">
-        </section>
+               </div>
+            </label>
+            <input class="input" id="body" type="button" name="radiobutton" value="3" onclick = "populateData(event)">
+            <label for="body">
+               <div class="flat">
+                  <ul>
+                     <a>
+                        <li>
+                           <p>< p ></p>
+                        </li>
+                     </a>
+                  </ul>
+               </div>
+            </label>
+         </nav>
+         <section id="content">
+            <div id="primeiroconteudo">
+            </div>
+         </section>
       </section>
       <script>
-var targetDiv = document.getElementById('content');
-    var htmlContent = '';
-
-    function populateData(event){
-      switch(event.target.value){
-        case '1':{
-         htmlContent = 'Content for A';
-          break;
-        }
-        case 'B':{
-          htmlContent = "content for B";
-break;
-        }
-        case 'C':{
-          htmlContent = "content for C";
-break;
-        }
-      }
-      targetDiv.innerHTML = htmlContent;
-    }
-        function goBack() {
-            window.history.back()
-        }
+         var targetDiv = document.getElementById('content');
+         var htmlContent = ''; 
+         let textnode = document.createTextNode('Content for A');
+         document.querySelector('#primeiroconteudo').appendChild(textnode);
+         function populateData(event){
+               switch(event.target.value){
+                 case '1':{
+                  htmlContent = 'Content for A';
+         break;
+                 }
+                 case '2':{
+                   htmlContent = "content for B";
+         break;
+                 }
+                 case '3':{
+                   htmlContent = "content for C";
+         break;
+                 }
+               }
+               targetDiv.innerHTML = htmlContent;
+             }
+                 function goBack() {
+                     window.history.back()
+                 }
+               
       </script>
-  </body>
+   </body>
 </html>
