@@ -368,12 +368,25 @@ com as telas */
 /*---------------------------------------------*/
 
 
-/*SEÇÃO DE FLATSINTAXES*/
+
+/*---------------------------------------------*/
+
+
+/*-------------PÁGINA DE LEITURA---------------*/
+
+
+/*---------------------------------------------*/
+
+/*--SEÇÃO DE CONTAINERS DA PÁGINA DE LEITURA---*/
 
 #flexContainer {
 	display: flex;
 }
-
+.margemnav{
+	margin-top: 80px;
+	height: 500px; 
+	overflow-y: scroll;
+}
 nav {
 	background: #F5F5F5;
 	/* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
@@ -392,11 +405,29 @@ nav {
 	padding: 3px;
 }
 
+/*FIM DE SEÇÃO DE CONTAINERS DA PÁGINA DE LEITURA*/
 
-/*SEÇÃO DE FLATSINTAXES*/
+/*SEÇÃO DE TEXTOS DA PÁGINA DE LEITURA*/
+.textopgleitura{
+	margin-top: 100px;
+	margin-left: 25px;
+	text-align: left;
+}
+.textopgleitura h1{
+	text-align: left;
+	font-size: 48px;
+	color:#27235F;
+}
+.textopgleitura p{
+	margin-top: 35px;
+	text-align: left;
+	font-size: 24px;
+	color:#000;
+}
 
+/*SEÇÃO DE TEXTOS DA PÁGINA DE LEITURA*/
 
-/*SECÇÃO DE BOTÕES*/
+/*SEÇÃO DE BOTÕES DA PÁGINA DE LEITURA*/
 
 .flat {
 	width: 100%;
@@ -430,16 +461,22 @@ nav {
 }
 
 .flat p {
-	font-size: 45px;
+	font-size: 23px;
 	color: #27235F;
 }
+/*FIM SEÇÃO DE BOTÕES DA PÁGINA DE LEITURA*/
 
+
+/*-------------------------------------------------------------------------*/
+
+/*AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE LEITURA*/
+/*-------------------------------------------------------------------------*/
 
 /* Smaller than standard 960 (devices and browsers) */
 
 @media only screen and (max-width: 959px) {
 	.flat p {
-		font-size: 45px;
+		font-size: 20px;
 	}
 }
 
@@ -448,7 +485,7 @@ nav {
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.flat p {
-		font-size: 40px;
+		font-size: 17px;
 	}
 }
 
@@ -457,7 +494,7 @@ nav {
 
 @media only screen and (max-width: 767px) {
 	.flat p {
-		font-size: 40px;
+		font-size: 17px;
 	}
 }
 
@@ -466,7 +503,7 @@ nav {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.flat p {
-		font-size: 30px;
+		font-size: 15px;
 	}
 }
 
@@ -475,10 +512,99 @@ nav {
 
 @media only screen and (max-width: 479px) {
 	.flat p {
+		font-size: 15px;
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/*FIM DE AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE LEITURA*/
+/*-------------------------------------------------------------------------*/
+
+/*BOTÕES DAS TELAS DE CONSULTA*/
+.flatputs {
+	width: 100%;
+	text-align: center;
+}
+
+.flatputs a {
+	font-size: 12px;
+	color: #27235F;
+	align-items: center;
+}
+
+.flatputs ul {
+	flex-direction: column;
+	justify-content: center;
+	display: flex;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 2%;
+}
+
+.flatputs li {
+	background-color: #C6D1E8;
+	display: inline-block;
+	width: 100%;
+	padding: 4%;
+	margin-top: 1%;
+	border-radius: 300px;
+	border: 0;
+	cursor: pointer;
+}
+
+.flatputs p {
+	font-size: 45px;
+	color: #27235F;
+}
+/*FIM BOTÕES DAS TELAS DE CONSULTA*/
+/*-------------------------------------------------------------------------*/
+/*---AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE CONSULTA---*/
+/*-------------------------------------------------------------------------*/
+@media only screen and (max-width: 959px) {
+	.flatputs p {
+		font-size: 45px;
+	}
+}
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.flatputs p {
+		font-size: 40px;
+	}
+}
+
+
+/* All Mobile Sizes (devices and browser) */
+
+@media only screen and (max-width: 767px) {
+	.flatputs p {
+		font-size: 40px;
+	}
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.flatputs p {
+		font-size: 30px;
+	}
+}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+@media only screen and (max-width: 479px) {
+	.flatputs p {
 		font-size: 20px;
 	}
 }
 
+/*-------------------------------------------------------------------------*/
+/*-FIM AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE CONSULTA-*/
+/*-------------------------------------------------------------------------*/
 
 /*  SECTION MAIN*/
 
@@ -486,12 +612,35 @@ nav {
 	width: 100%;
 	text-align: center;
 }
+/*---------------------------------------------*/
 
 
-/*  SECTION MAIN*/
+/*-----------FIM PÁGINA DE LEITURA-------------*/
 
 
-/*<--  Botoes do Index  -->*/
+/*---------------------------------------------*/
+
+
+/*---------------------------------------------*/
+
+
+/*--------------PÁGINA DE INDEX----------------*/
+
+
+/*---------------------------------------------*/
+
+/*SEÇÃO DE BOTÕES DE INDEX*/
+
+.sectionmain {
+	width: 100%;
+	text-align: center;
+}
+
+
+/*FIM DE SEÇÃO DE BOTÕES DE INDEX*/
+
+
+/*SEÇÃO DE BOTÕES DE INDEX*/
 
 .puts {
 	flex-direction: row;
@@ -516,10 +665,25 @@ nav {
 	color: #27235F;
 }
 
+/*FIM DE SEÇÃO DE BOTÕES DE INDEX*/
+
+/*AJUSTES DE BOTÕES DE ACORDO COM O TAMANHO DE TELA*/
+
+/* Smaller than standard 960 (devices and browsers) */
+
+@media only screen and (max-width: 959px) {
+	.puts p {
+		font-size: 45px;
+	}
+}
+
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.puts {
 		margin-right: 150px;
 		margin-left: 150px;
+	}
+	.puts p {
+		font-size: 40px;
 	}
 }
 
@@ -527,6 +691,9 @@ nav {
 	.puts {
 		margin-right: 50px;
 		margin-left: 50px;
+	}
+	.puts p {
+		font-size: 40px;
 	}
 }
 
@@ -537,6 +704,9 @@ nav {
 	.puts {
 		margin-right: 50px;
 		margin-left: 50px;
+	}
+	.puts p {
+		font-size: 30px;
 	}
 }
 
@@ -555,52 +725,18 @@ nav {
 	.puts button {
 		margin-top: 25px;
 	}
-}
-
-
-/* Media Ony da tag p do puts*/
-
-
-/* Smaller than standard 960 (devices and browsers) */
-
-@media only screen and (max-width: 959px) {
-	.puts p {
-		font-size: 45px;
-	}
-}
-
-
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	.puts p {
-		font-size: 40px;
-	}
-}
-
-
-/* All Mobile Sizes (devices and browser) */
-
-@media only screen and (max-width: 767px) {
-	.puts p {
-		font-size: 40px;
-	}
-}
-
-
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-	.puts p {
-		font-size: 30px;
-	}
-}
-
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-
-@media only screen and (max-width: 479px) {
 	.puts p {
 		font-size: 20px;
 	}
 }
+
+
+/*FIM DE AJUSTES DE BOTÕES DE ACORDO COM O TAMANHO DE TELA*/
+
+/*---------------------------------------------*/
+
+
+/*----------FIM DE PÁGINA DE INDEX-------------*/
+
+
+/*---------------------------------------------*/

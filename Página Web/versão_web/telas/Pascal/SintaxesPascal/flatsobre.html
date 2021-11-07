@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../StylesSheet/styles.css">
+    <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+       <!--incio do header-->
+       <div class="center">
+          <div class="menu">
+             <!--menu-->
+             <button class="btn" onclick="goBack()"></button>
+          </div>
+          <!--botao dentro do menu-->
+          <div class="logo">
+             <!--logo-->
+             <img src="../../../images/Manoel-Syntax.png">
+          </div>
+       </div>
+    </header>
+    <section id="flexContainer">
+       <nav>
+          <div class="margemnav">
+             <input class="input" id="definicao" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
+             <label for="definicao">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>&lthtml&gt</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+          </div>
+       </nav>
+       <section id="content">
+          <div class="textopgleitura" id="conteudo">
+          </div>
+       </section>
+    </section>
+    <script>
+       var targetDiv = document.getElementById('conteudo');
+       
+       var htmlContent = ''; 
+       
+       document.querySelector('#conteudo').innerHTML = '<h1>DEFINIÇÃO</h1><p>HTML significa Hyper Text Markup Language e é a linguagem de marcação de hipertexto, ou seja, é a linguagem na qual são escritas as páginas da Web, interpretada pelo navegador. As informações estão ligadas na forma de páginas ligadas entre si. A página é transferida de um computador remoto para o usuário, onde o browser faz o trabalho de interpretar os códigos naquele documento e mostra a página que o usuário vê. A Web está estruturada em dois princípios básicos: HTTP(Hiper Text Transfer Protocol) e HTML (Hiper Text Markup Language). HTTP é o protocolo de transferência de hipertexto, ou seja, é o protocolo que permite a navegação na Web, com o simples clicar do mouse sobre o texto (ou imagem) que esteja associado a outro link.</p>';
+       
+       function populateData(event){
+             switch(event.target.value){
+               case '1':{
+                htmlContent = '<h1>DEFINIÇÃO</h1><p>HTML significa Hyper Text Markup Language e é a linguagem de marcação de hipertexto, ou seja, é a linguagem na qual são escritas as páginas da Web, interpretada pelo navegador. As informações estão ligadas na forma de páginas ligadas entre si. A página é transferida de um computador remoto para o usuário, onde o browser faz o trabalho de interpretar os códigos naquele documento e mostra a página que o usuário vê. A Web está estruturada em dois princípios básicos: HTTP(Hiper Text Transfer Protocol) e HTML (Hiper Text Markup Language). HTTP é o protocolo de transferência de hipertexto, ou seja, é o protocolo que permite a navegação na Web, com o simples clicar do mouse sobre o texto (ou imagem) que esteja associado a outro link.</p>';
+       break;
+               }
+               
+             }
+             
+             targetDiv.innerHTML = htmlContent;
+           }
+       
+               function goBack() {
+                   window.history.back()
+               }
+             
+    </script>
+ </body>
+</html>

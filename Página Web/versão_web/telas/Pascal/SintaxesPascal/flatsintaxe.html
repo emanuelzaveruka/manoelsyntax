@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../StylesSheet/styles.css">
+    <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+       <!--incio do header-->
+       <div class="center">
+          <div class="menu">
+             <!--menu-->
+             <button class="btn" onclick="goBack()"></button>
+          </div>
+          <!--botao dentro do menu-->
+          <div class="logo">
+             <!--logo-->
+             <img src="../../../images/Manoel-Syntax.png">
+          </div>
+       </div>
+    </header>
+    <section id="flexContainer">
+       <nav>
+          <div class="margemnav">
+             <input class="input" id="program" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
+             <label for="program">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>program</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="var" type="checkbox" name="radiobutton" value="2" onclick = "populateData(event)">
+             <label for="var">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>var</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="begin" type="checkbox" name="radiobutton" value="3" onclick = "populateData(event)">
+             <label for="begin">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>begin</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="end" type="checkbox" name="radiobutton" value="4" onclick = "populateData(event)">
+             <label for="end">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>end</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>             
+             <input class="input" id="readln" type="checkbox" name="radiobutton" value="5" onclick = "populateData(event)">
+             <label for="readln">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>readln</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="writeln" type="checkbox" name="radiobutton" value="6" onclick = "populateData(event)">
+             <label for="writeln">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>writeln</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="if" type="checkbox" name="radiobutton" value="7" onclick = "populateData(event)">
+             <label for="if">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>if</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="then" type="checkbox" name="radiobutton" value="14" onclick = "populateData(event)">
+             <label for="then">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>then</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="and" type="checkbox" name="radiobutton" value="8" onclick = "populateData(event)">
+             <label for="and">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>and</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="xor" type="checkbox" name="radiobutton" value="9" onclick = "populateData(event)">
+             <label for="xor">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>xor</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="or" type="checkbox" name="radiobutton" value="10" onclick = "populateData(event)">
+             <label for="or">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>or</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="for" type="checkbox" name="radiobutton" value="11" onclick = "populateData(event)">
+             <label for="for">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>for</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>
+             <input class="input" id="while" type="checkbox" name="radiobutton" value="12" onclick = "populateData(event)">
+             <label for="while">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>while</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>      
+             <input class="input" id="do" type="checkbox" name="radiobutton" value="13" onclick = "populateData(event)">
+             <label for="do">
+                <div class="flat">
+                   <ul>
+                      <a>
+                         <li>
+                            <p>do</p>
+                         </li>
+                      </a>
+                   </ul>
+                </div>
+             </label>      
+            </div>
+       </nav>
+       <section id="content">
+          <div class="textopgleitura" id="conteudo">
+          </div>
+       </section>
+    </section>
+    <script>
+       var targetDiv = document.getElementById('conteudo');
+       
+       var htmlContent = ''; 
+       
+       document.querySelector('#conteudo').innerHTML = '<h1>Program</h1><p>A sintaxe <b>program</b> é utilizada para se fazer a identificação do programa com um nome. O cabeçalho de um programa é atribuído pela instrução program seguida de um nome. Ao final do nome deve-se colocar o símbolo ponto-e-vírgula ( ; ). Não pode existir nenhuma variável no programa que tenha o mesmo nome dado ao programa. Como exemplo: <br><br> <b>program</b> SOMA_NUMERO; </p>';
+       
+       function populateData(event){
+             switch(event.target.value){
+               case '1':{
+                htmlContent = '<h1>Program</h1><p>A sintaxe <b>program</b> é utilizada para se fazer a identificação do programa com um nome. O cabeçalho de um programa é atribuído pela instrução program seguida de um nome. Ao final do nome deve-se colocar o símbolo ponto-e-vírgula ( ; ). Não pode existir nenhuma variável no programa que tenha o mesmo nome dado ao programa. Como exemplo: <br><br> <b>program</b> SOMA_NUMERO;</p>';
+       break;
+               }
+               case '2':{
+                htmlContent = '<h1>Var</h1><p> A <b>var</b> é utilizada na declaração das variáveis que serão utilizadas durante a execução de um programa, bem como, também o seu tipo. Como exemplo: <br><br> <b>var</b> <br> nome : <b>string</b>; <br> idade : <b>integer</b>; <br> altura : <b>real</b>; <br><br> As variaveis podem ser decladas dessa forma também: <br><br> <b>var</b> <br> A,B,C : <b>integer</b>;</p>';
+       break;
+               }
+               case '3':{
+                htmlContent = '<h1>Begin</h1><p> A sintaxe <b>begin</b> inicia a compilação dos códigos contidos no programa. Como exemplo: <br> <br> <b>begin</b><br>instruções do código;</p>';
+       break;
+               }
+               case '4':{
+                htmlContent = '<h1>End</h1><p> A sintaxe <b>end</b> encerra a compilação do programa. Como exemplo: <br><br> <b>begin</b><br>instruções do código;<br><b>end.</b></p>';
+       break;
+               }
+               case '5':{
+                htmlContent = '<h1>Readln</h1><p> A sintaxe <b>readln</b> permite a entrada de variaveis digitadas pelo teclado. Como exemplo <br><br> begin<br> var <br> nome : string;<br><b>readln(nome)</b>;<br>end.</p>';
+       break;
+               }
+               case '6':{
+                htmlContent = '<h1>Writeln</h1><p> A sintaxe <b>writeln</b> imprime as variaveis. Como exemplo <br><br> begin<br> var <br> nome : string;<br>readln(nome);<br><b>writeln(nome)</b><br>end.<br><br><b>Resultado: Nome digitado</b></p>';
+       break;
+               }
+               case '7':{
+                htmlContent = '<h1>If</h1><p> A sintaxe <b>if</b> é o desvio de código conforme a condição lógica. De exemplo: <br><br><b>if</b> x < y then<br>  writeln(x);</p>';
+       break;
+               }
+               case '8':{
+                htmlContent = '<h1>And</h1><p> Operador lógico <b>and</b> utilizado em codições lógicas. </p>';
+       break;
+               }
+               case '9':{
+                htmlContent = '<h1>Xor</h1><p> Operador lógico ou exclusivo <b>xor</b> utilizado em codições lógicas. </p>';
+       break;
+               }
+               case '10':{
+                htmlContent = '<h1>Or</h1><p> Operador lógico <b>or</b> utilizado em codições lógicas. </p>';
+       break;
+               }
+               case '11':{
+                htmlContent = '<h1>For</h1><p> A sintaxe <b>for</b> cria um laço, nela se faz necessário informar a quatidade de laços que se deseja dar. De exemplo <br><br> <b>for </b> variavel = <inicio de contagem> to <fim de contagem> do <br> begin <br> código que irá compilar; <br> end;</p>';
+       break;
+               }
+               case '12':{
+                htmlContent = '<h1>While</h1><p> A sintaxe <b>while</b> cria um laço, nela não se faz necessário informar a quatidade de laços que se deseja dar. Para que o laço pare, se faz necessário o uso de uma condição. Como exemplo <br><br> <b>while</b> x<y (condição) do <br> begin <br> x = x + 1; <br> end;</p>';
+       break;
+               }
+               case '13':{
+                htmlContent = '<h1>Do</h1><p> A sintaxe <b>do</b> é amplamente utilizada em vários comandos, indicando o início do código a ser executado</p>';
+       break;
+               }
+               case '14':{
+                htmlContent = '<h1>Then</h1><p> A sintaxe <b>then</b> é  utilizada na sintaxe para indicar o bloco de código que será executado. Como exemplo <br><br>if x < y <b>then</b><br>  writeln(x);</p>';
+       break;
+               }
+             }
+             
+             targetDiv.innerHTML = htmlContent;
+           }
+       
+               function goBack() {
+                   window.history.back()
+               }
+             
+    </script>
+ </body>
+</html>
