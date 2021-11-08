@@ -1,32 +1,16 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
    <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Navbar</title>
       <link rel="stylesheet" href="../../../StylesSheet/styles.css">
       <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
-      <style>
-      </style>
+      <title>Document</title>
    </head>
    <body>
-      <header>
-         <!--incio do header-->
-         <div class="center">
-            <div class="menu">
-               <!--menu-->
-               <button class="btn" onclick="goBack()"></button>
-            </div>
-            <!--botao dentro do menu-->
-            <div class="logo">
-               <!--logo-->
-               <img src="../../../images/Manoel-Syntax.png">
-            </div>
-         </div>
-      </header>
-      <section id="flexContainer">
-         <nav>
+      <div class="barramobile">
+         <nav class="navmobile">
             <div class="margemnav">
                <input class="input" id="html" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
                <label for="html">
@@ -330,21 +314,373 @@
                </label>
             </div>
          </nav>
-         <section id="content">
-            <div class="textopgleitura" id="conteudo">
+      </div>
+
+         <header>
+            <!--incio do header-->
+            <div class="center">
+               <div class="imgmobile">
+                  <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
+                  <label for="checkmobile" id="icone">
+                  <img src="../../../images/icone.png">
+                  </label>
+               </div>
+               <div class="menu">
+                  <!--menu-->
+                  <button class="btn" onclick="goBack()"></button>
+               </div>
+               <!--botao dentro do menu-->
+               <input class="input"id="review" type="button" onclick ="window.location.href ='../../../telas/rewiew/rewiew.html'">
+               <div class="logo">
+                  <!--logo-->
+                  <label for="review">
+                  <img src="../../../images/Manoel-Syntax.png">
+                  </label>
+               </div>
             </div>
+         </header>
+         <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
+         <label for="checkmobile" id="icone">
+         <section id="flexContainer">
+            <nav class="navdesktop">
+               <div class="margemnav">
+               
+                  <input class="input" id="html" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
+                  <label for="html">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&lthtml&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="head" type="button" name="radiobutton" value="2" onclick = "populateData(event)">
+                  <label for="head">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&lthead&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="title" type="button" name="radiobutton" value="3" onclick = "populateData(event)">
+                  <label for="title">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&lttitle&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="body" type="button" name="radiobutton" value="4" onclick = "populateData(event)">
+                  <label for="body">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltbody&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="bgcolor" type="button" name="radiobutton" value="5" onclick = "populateData(event)">
+                  <label for="bgcolor">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltbgcolor&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="background" type="button" name="radiobutton" value="6" onclick = "populateData(event)">
+                  <label for="background">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltbackground&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="h" type="button" name="radiobutton" value="7" onclick = "populateData(event)">
+                  <label for="h">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltH1&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="b" type="button" name="radiobutton" value="8" onclick = "populateData(event)">
+                  <label for="b">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltB&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="i" type="button" name="radiobutton" value="9" onclick = "populateData(event)">
+                  <label for="i">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltI&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="u" type="button" name="radiobutton" value="10" onclick = "populateData(event)">
+                  <label for="u">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltU&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="sup" type="button" name="radiobutton" value="11" onclick = "populateData(event)">
+                  <label for="sup">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltSUP&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="sub" type="button" name="radiobutton" value="12" onclick = "populateData(event)">
+                  <label for="sub">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltSUB&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="pre" type="button" name="radiobutton" value="13" onclick = "populateData(event)">
+                  <label for="pre">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltPRE&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="p" type="button" name="radiobutton" value="14" onclick = "populateData(event)">
+                  <label for="p">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltP&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="font" type="button" name="radiobutton" value="15" onclick = "populateData(event)">
+                  <label for="font">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltFONT&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="br" type="button" name="radiobutton" value="16" onclick = "populateData(event)">
+                  <label for="br">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltBR&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="hr" type="button" name="radiobutton" value="17" onclick = "populateData(event)">
+                  <label for="hr">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltHR&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="img" type="button" name="radiobutton" value="18" onclick = "populateData(event)">
+                  <label for="img">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltIMG&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="a" type="button" name="radiobutton" value="19" onclick = "populateData(event)">
+                  <label for="a">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltA&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="ol" type="button" name="radiobutton" value="20" onclick = "populateData(event)">
+                  <label for="ol">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltOL&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="table" type="button" name="radiobutton" value="21" onclick = "populateData(event)">
+                  <label for="table">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltTABLE&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="caption" type="button" name="radiobutton" value="22" onclick = "populateData(event)">
+                  <label for="caption">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltCAPTION&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="td" type="button" name="radiobutton" value="23" onclick = "populateData(event)">
+                  <label for="td">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltTD&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="th" type="button" name="radiobutton" value="24" onclick = "populateData(event)">
+                  <label for="th">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltTH&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+                  <input class="input" id="tr" type="button" name="radiobutton" value="25" onclick = "populateData(event)">
+                  <label for="tr">
+                     <div class="flat">
+                        <ul>
+                           <a>
+                              <li>
+                                 <p>&ltTR&gt</p>
+                              </li>
+                           </a>
+                        </ul>
+                     </div>
+                  </label>
+            
+            
+            </div>
+         </nav>
+            <section id="content">
+               <div class="textopgleitura" id="conteudo">
+               </div>
+            </section>
+         </div>
          </section>
-      </section>
+         </label>
+      
       <script>
+
+         var checkbox = document.getElementById('checkmobile');
+         function animacaodebarra(){
+
+         if(checkbox.checked) {
+           document.querySelector(".barramobile").style.left = "0px";
+         } else {
+           document.querySelector(".barramobile").style.left = "-300px";
+         }
+         }
+         
+         //script que muda o conteudo quando clicado
          var targetDiv = document.getElementById('conteudo');
          
          var htmlContent = ''; 
          
+
          document.querySelector('#conteudo').innerHTML = '<h1>< HTML ></h1><p>Todo o documento HTML fica contido entre os TAGS: &ltHTML&gt e &lt/HTML&gt. Uma página HTML possui três partes básicas: estrutura principal, um cabeçalho e um corpo de página.</p>';
-         
+
          function populateData(event){
+         
                switch(event.target.value){
-                 case '1':{
+                  case '1':{
                   htmlContent = '<h1>< HTML ></h1><p>Todo o documento HTML fica contido entre os TAGS: &ltHTML&gt e &lt/HTML&gt. Uma página HTML possui três partes básicas: estrutura principal, um cabeçalho e um corpo de página.</p>';
          break;
                  }
@@ -444,7 +780,6 @@
                    htmlContent = "<h1>< TR ></h1><p>A TAG &ltTR&gt indica o início de uma linha na tabela. Cada linha da tabela pode conter várias células, e, portanto, é necessário que se faça uso de uma marcação que indique exatamente o ponto de quebra de uma linha e início de outra.</p>";
          break;
                  }
-                 
                }
                
                targetDiv.innerHTML = htmlContent;

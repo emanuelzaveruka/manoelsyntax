@@ -41,11 +41,9 @@
 }
 
 .menu {
+	display: block;
 	text-align: left;
 }
-
-
-/*Classe do botão*/
 
 .input {
 	display: none
@@ -56,6 +54,7 @@
 	color-interpolation-filters: linearRGB;
 	background-repeat: no-repeat;
 	background-color: white;
+	top: 25px;
 	margin-left: 25px;
 	padding: 20px 20px;
 	border-radius: 40px;
@@ -70,10 +69,183 @@
 	border-radius: 40px;
 }
 
-.menu .btn-menu:hover {
-	background-color: rgb(52, 175, 175);
-	color: black;
+
+header {
+	z-index: 1;
 }
+
+
+/*---------------------------------------------*/
+
+
+/*----------------MENU MOBILE------------------*/
+
+
+/*---------------------------------------------*/
+
+.imgmobile {
+	display: none;
+}
+
+.imgmobile img {
+	max-height: 50px;
+	min-height: auto;
+	margin-left: 15px;
+	top: 25px;
+	cursor: pointer;
+	position: absolute;
+	z-index: 3;
+	display: none;
+}
+
+
+.barramobile {
+	background-color: #F5F5F5;
+	border-right: solid 3px;
+	border-color: #C6D1E8;
+	flex: 1 1 15%;
+	min-width: 150px;
+	padding: 3px;
+	width: 250px;
+	height: 150%;
+	position: absolute;
+	z-index: 2;
+	transition: all .2s linear;
+	left: -300px;
+	display: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.barramobile {
+		display: block;
+	}
+}
+
+
+/* All Mobile Sizes (devices and browser) */
+
+@media only screen and (max-width: 767px) {
+	.barramobile {
+		display: block;
+	}
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.barramobile {
+		display: block;
+	}
+}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+@media only screen and (max-width: 479px) {
+	.barramobile {
+		display: block;
+	}
+}
+
+
+
+/*---------------------------------------------*/
+
+
+/*------------FIM MENU MOBILE------------------*/
+
+
+/*---------------------------------------------*/
+
+
+/*---------------------------------------------*/
+
+
+/*AJUSTES DE MENUS ATRAVES DE TAMNAHOS DE TELA*/
+
+
+/*---------------------------------------------*/
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.imgmobile {
+		display: block;
+	}
+	.imgmobile img {
+		display: block;
+	}
+	.menu {
+		display: none;
+	}
+	.navdesktop {
+		display: none;
+	}
+}
+
+
+/* All Mobile Sizes (devices and browser) */
+
+@media only screen and (max-width: 767px) {
+	.imgmobile {
+		display: block;
+	}
+	.imgmobile img {
+		display: block;
+	}
+	.menu {
+		display: none;
+	}
+	.navdesktop {
+		display: none;
+	}
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.imgmobile {
+		display: block;
+	}
+	.imgmobile img {
+		display: block;
+	}
+	.menu {
+		display: none;
+	}
+	.navdesktop {
+		display: none;
+	}
+}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+@media only screen and (max-width: 479px) {
+	.imgmobile {
+		display: block;
+	}
+	.imgmobile img {
+		display: block;
+	}
+	.menu {
+		display: none;
+	}
+	.navdesktop {
+		display: none;
+	}
+}
+
+
+/*---------------------------------------------*/
+
+
+/*AJUSTES DE MENUS ATRAVES DE TAMNAHOS DE TELA*/
+
+
+/*---------------------------------------------*/
 
 
 /*<--- SECTION MAIN ---> */
@@ -368,7 +540,6 @@ com as telas */
 /*---------------------------------------------*/
 
 
-
 /*---------------------------------------------*/
 
 
@@ -377,17 +548,20 @@ com as telas */
 
 /*---------------------------------------------*/
 
+
 /*--SEÇÃO DE CONTAINERS DA PÁGINA DE LEITURA---*/
 
 #flexContainer {
 	display: flex;
 }
-.margemnav{
+
+.margemnav {
 	margin-top: 80px;
-	height: 500px; 
+	height: 500px;
 	overflow-y: scroll;
 }
-nav {
+
+.navdesktop {
 	background: #F5F5F5;
 	/* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
 	flex: 1 1 15%;
@@ -395,6 +569,7 @@ nav {
 	padding: 3px;
 	border-right: solid 3px;
 	border-color: #C6D1E8;
+	display: block;
 }
 
 #content {
@@ -405,27 +580,76 @@ nav {
 	padding: 3px;
 }
 
+
+/*-------------------------------------------------------------------------*/
+
+
+/*AJUSTES CONFORME O TAMANHO DE TELA DO MENU LATERAL*/
+
+
+/*-------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.navdesktop {
+		display: none;
+	}
+}
+
+
+/* All Mobile Sizes (devices and browser) */
+
+@media only screen and (max-width: 767px) {
+	.navdesktop {
+		display: none;
+	}
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.navdesktop {
+		display: none;
+	}
+}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+@media only screen and (max-width: 479px) {
+	.navdesktop {
+		display: none;
+	}
+}
+
+
 /*FIM DE SEÇÃO DE CONTAINERS DA PÁGINA DE LEITURA*/
 
+
 /*SEÇÃO DE TEXTOS DA PÁGINA DE LEITURA*/
-.textopgleitura{
+
+.textopgleitura {
 	margin-top: 100px;
 	margin-left: 25px;
 	text-align: left;
 }
-.textopgleitura h1{
+
+.textopgleitura h1 {
 	text-align: left;
 	font-size: 48px;
-	color:#27235F;
+	color: #27235F;
 }
-.textopgleitura p{
+
+.textopgleitura p {
 	margin-top: 35px;
 	text-align: left;
 	font-size: 24px;
-	color:#000;
+	color: #000;
 }
 
+
 /*SEÇÃO DE TEXTOS DA PÁGINA DE LEITURA*/
+
 
 /*SEÇÃO DE BOTÕES DA PÁGINA DE LEITURA*/
 
@@ -458,19 +682,28 @@ nav {
 	border-radius: 300px;
 	border: 0;
 	cursor: pointer;
+	transition: all .2s;
 }
-
+.flat li:hover {
+	background-color: #a7b0c7b2;
+}
 .flat p {
 	font-size: 23px;
 	color: #27235F;
 }
+
+
 /*FIM SEÇÃO DE BOTÕES DA PÁGINA DE LEITURA*/
 
 
 /*-------------------------------------------------------------------------*/
 
+
 /*AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE LEITURA*/
+
+
 /*-------------------------------------------------------------------------*/
+
 
 /* Smaller than standard 960 (devices and browsers) */
 
@@ -516,11 +749,18 @@ nav {
 	}
 }
 
-/*-------------------------------------------------------------------------*/
-/*FIM DE AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE LEITURA*/
+
 /*-------------------------------------------------------------------------*/
 
+
+/*FIM DE AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE LEITURA*/
+
+
+/*-------------------------------------------------------------------------*/
+
+
 /*BOTÕES DAS TELAS DE CONSULTA*/
+
 .flatputs {
 	width: 100%;
 	text-align: center;
@@ -550,19 +790,32 @@ nav {
 	border-radius: 300px;
 	border: 0;
 	cursor: pointer;
+	transition: all .2s;
+}
+.flatputs li:hover {
+	background-color: #a7b0c7b2;
 }
 
 .flatputs p {
 	font-size: 45px;
 	color: #27235F;
 }
+
+
 /*FIM BOTÕES DAS TELAS DE CONSULTA*/
+
+
 /*-------------------------------------------------------------------------*/
+
+
 /*---AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE CONSULTA---*/
+
+
 /*-------------------------------------------------------------------------*/
+
 @media only screen and (max-width: 959px) {
 	.flatputs p {
-		font-size: 45px;
+		font-size: 50px;
 	}
 }
 
@@ -571,7 +824,7 @@ nav {
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.flatputs p {
-		font-size: 40px;
+		font-size: 50px;
 	}
 }
 
@@ -580,7 +833,7 @@ nav {
 
 @media only screen and (max-width: 767px) {
 	.flatputs p {
-		font-size: 40px;
+		font-size: 50px;
 	}
 }
 
@@ -589,7 +842,7 @@ nav {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.flatputs p {
-		font-size: 30px;
+		font-size: 40px;
 	}
 }
 
@@ -598,13 +851,19 @@ nav {
 
 @media only screen and (max-width: 479px) {
 	.flatputs p {
-		font-size: 20px;
+		font-size: 40px;
 	}
 }
 
+
 /*-------------------------------------------------------------------------*/
+
+
 /*-FIM AJUSTES CONFORME O TAMANHO DE TELA DOS BOTÕES DA PÁGINA DE CONSULTA-*/
+
+
 /*-------------------------------------------------------------------------*/
+
 
 /*  SECTION MAIN*/
 
@@ -612,6 +871,8 @@ nav {
 	width: 100%;
 	text-align: center;
 }
+
+
 /*---------------------------------------------*/
 
 
@@ -628,6 +889,7 @@ nav {
 
 
 /*---------------------------------------------*/
+
 
 /*SEÇÃO DE BOTÕES DE INDEX*/
 
@@ -658,6 +920,10 @@ nav {
 	border-radius: 300px;
 	border: 0;
 	cursor: pointer;
+	transition: all .2s;
+}
+.puts button:hover {
+	background-color: #a7b0c7b2;
 }
 
 .puts p {
@@ -665,15 +931,18 @@ nav {
 	color: #27235F;
 }
 
+
 /*FIM DE SEÇÃO DE BOTÕES DE INDEX*/
 
+
 /*AJUSTES DE BOTÕES DE ACORDO COM O TAMANHO DE TELA*/
+
 
 /* Smaller than standard 960 (devices and browsers) */
 
 @media only screen and (max-width: 959px) {
 	.puts p {
-		font-size: 45px;
+		font-size: 50px;
 	}
 }
 
@@ -683,7 +952,7 @@ nav {
 		margin-left: 150px;
 	}
 	.puts p {
-		font-size: 40px;
+		font-size: 50px;
 	}
 }
 
@@ -693,7 +962,7 @@ nav {
 		margin-left: 50px;
 	}
 	.puts p {
-		font-size: 40px;
+		font-size: 50px;
 	}
 }
 
@@ -706,7 +975,7 @@ nav {
 		margin-left: 50px;
 	}
 	.puts p {
-		font-size: 30px;
+		font-size: 50px;
 	}
 }
 
@@ -726,12 +995,13 @@ nav {
 		margin-top: 25px;
 	}
 	.puts p {
-		font-size: 20px;
+		font-size: 50px;
 	}
 }
 
 
 /*FIM DE AJUSTES DE BOTÕES DE ACORDO COM O TAMANHO DE TELA*/
+
 
 /*---------------------------------------------*/
 

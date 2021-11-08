@@ -1,73 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../StylesSheet/styles.css">
-    <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-       <!--incio do header-->
-       <div class="center">
-          <div class="menu">
-             <!--menu-->
-             <button class="btn" onclick="goBack()"></button>
-          </div>
-          <!--botao dentro do menu-->
-          <div class="logo">
-             <!--logo-->
-             <img src="../../../images/Manoel-Syntax.png">
-          </div>
-       </div>
-    </header>
-    <section id="flexContainer">
-       <nav>
-          <div class="margemnav">
-             <input class="input" id="definicao" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
-             <label for="definicao">
-                <div class="flat">
-                   <ul>
-                      <a>
-                         <li>
-                            <p>&lthtml&gt</p>
-                         </li>
-                      </a>
-                   </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../StylesSheet/styles.css">
+        <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="barramobile">
+            <nav class="navmobile">
+                <div class="margemnav">
+                    <input class="input" id="program" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
+                    <label for="program">
+                        <div class="flat">
+                            <ul>
+                                <a>
+                                    <li>
+                                        <p>program</p>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </label>
                 </div>
-             </label>
-          </div>
-       </nav>
-       <section id="content">
-          <div class="textopgleitura" id="conteudo">
-          </div>
-       </section>
-    </section>
-    <script>
-       var targetDiv = document.getElementById('conteudo');
-       
-       var htmlContent = ''; 
-       
-       document.querySelector('#conteudo').innerHTML = '<h1>DEFINIÇÃO</h1><p>HTML significa Hyper Text Markup Language e é a linguagem de marcação de hipertexto, ou seja, é a linguagem na qual são escritas as páginas da Web, interpretada pelo navegador. As informações estão ligadas na forma de páginas ligadas entre si. A página é transferida de um computador remoto para o usuário, onde o browser faz o trabalho de interpretar os códigos naquele documento e mostra a página que o usuário vê. A Web está estruturada em dois princípios básicos: HTTP(Hiper Text Transfer Protocol) e HTML (Hiper Text Markup Language). HTTP é o protocolo de transferência de hipertexto, ou seja, é o protocolo que permite a navegação na Web, com o simples clicar do mouse sobre o texto (ou imagem) que esteja associado a outro link.</p>';
-       
-       function populateData(event){
-             switch(event.target.value){
-               case '1':{
-                htmlContent = '<h1>DEFINIÇÃO</h1><p>HTML significa Hyper Text Markup Language e é a linguagem de marcação de hipertexto, ou seja, é a linguagem na qual são escritas as páginas da Web, interpretada pelo navegador. As informações estão ligadas na forma de páginas ligadas entre si. A página é transferida de um computador remoto para o usuário, onde o browser faz o trabalho de interpretar os códigos naquele documento e mostra a página que o usuário vê. A Web está estruturada em dois princípios básicos: HTTP(Hiper Text Transfer Protocol) e HTML (Hiper Text Markup Language). HTTP é o protocolo de transferência de hipertexto, ou seja, é o protocolo que permite a navegação na Web, com o simples clicar do mouse sobre o texto (ou imagem) que esteja associado a outro link.</p>';
-       break;
-               }
-               
-             }
-             
-             targetDiv.innerHTML = htmlContent;
-           }
-       
-               function goBack() {
-                   window.history.back()
-               }
-             
-    </script>
- </body>
+            </nav>
+        </div>
+        <header>
+            <!--incio do header-->
+            <div class="center">
+                <div class="imgmobile">
+                    <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
+                    <label for="checkmobile" id="icone">
+                    <img src="../../../images/icone.png">
+                    </label>
+                </div>
+                <div class="menu">
+                    <!--menu-->
+                    <button class="btn" onclick="goBack()"></button>
+                </div>
+                <!--botao dentro do menu-->
+                <input class="input"id="review" type="button" onclick ="window.location.href ='../../../telas/rewiew/rewiew.html'">
+                <div class="logo">
+                    <!--logo-->
+                    <label for="review">
+                    <img src="../../../images/Manoel-Syntax.png">
+                    </label>
+                </div>
+            </div>
+        </header>
+        <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
+        <label for="checkmobile" id="icone">
+            <section id="flexContainer">
+                <nav class="navdesktop">
+                    <div class="margemnav">
+                        <input class="input" id="program" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
+        <label for="program">
+        <div class="flat">
+        <ul>
+        <a>
+        <li>
+        <p>program</p>
+        </li>
+        </a>
+        </ul>
+        </div>
+        </label>
+        </div>
+        </nav>
+        <section id="content">
+        <div class="textopgleitura" id="conteudo">
+        </div>
+        </section>
+        </div>
+        </section>
+        </label>
+        <script>
+            var checkbox = document.getElementById('checkmobile');
+            function animacaodebarra(){
+            
+            if(checkbox.checked) {
+              document.querySelector(".barramobile").style.left = "0px";
+            } else {
+              document.querySelector(".barramobile").style.left = "-300px";
+            }
+            }
+            
+            //script que muda o conteudo quando clicado
+            var targetDiv = document.getElementById('conteudo');
+            
+            var htmlContent = ''; 
+            
+            
+            document.querySelector('#conteudo').innerHTML = '<h1>Program</h1><p>A sintaxe <b>program</b> é utilizada para se fazer a identificação do programa com um nome. O cabeçalho de um programa é atribuído pela instrução program seguida de um nome. Ao final do nome deve-se colocar o símbolo ponto-e-vírgula ( ; ). Não pode existir nenhuma variável no programa que tenha o mesmo nome dado ao programa. Como exemplo: <br><br> <b>program</b> SOMA_NUMERO; </p>';
+            
+            function populateData(event){
+            
+                  switch(event.target.value){
+                    case '1':{
+                     htmlContent = '<h1>Program</h1><p>A sintaxe <b>program</b> é utilizada para se fazer a identificação do programa com um nome. O cabeçalho de um programa é atribuído pela instrução program seguida de um nome. Ao final do nome deve-se colocar o símbolo ponto-e-vírgula ( ; ). Não pode existir nenhuma variável no programa que tenha o mesmo nome dado ao programa. Como exemplo: <br><br> <b>program</b> SOMA_NUMERO;</p>';
+            break;
+                    }
+                  }
+                  
+                  targetDiv.innerHTML = htmlContent;
+                }
+            
+                    function goBack() {
+                        window.history.back()
+                    }
+                  
+        </script>
+    </body>
 </html>
