@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="StylesSheet/styles.css" >
-      <title>Manoel-Syntax</title>
-   </head>
-   <body bgcolor="#F5F5F5">
-      <div class="center">
-         <div class="menu">
-            <!--menu-->
-         </div>
-         <!--botao dentro do menu-->
-         <input class="input"id="review" type="button" onclick ="window.location.href ='telas/rewiew/rewiew.html'">
-         <div class="logo">
-            <!--logo-->
-            <label for="review">
-            <img src="images/Manoel-Syntax.png">
-            </label>
-         </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='icon' type='image/png' href="images/icontitle.png">
+  <title>Manoel Syntax</title>
+  <link rel="stylesheet" href="StylesSheet/styles.css">
+</head>
+  <body bgcolor="#F5F5F5">
+      <header> <!--incio do header-->
+        <div class="centerheader">
+            <div class="menu"><!--menu-->
+              <div class="menu"><!--menu-->
+                <button class="btn" onclick="goBack()"></button>
+              </div><!--botao dentro do menu-->
+              </div><!--botao dentro do menu-->
+              <div class="logo"><!--logo-->
+                <img src="images/Manoel-Syntax.png">
+              </div>
+        </div>
+      </header>
+      <section id="flexContainereviewtwo">
+        <div class="conteinerreview">
+        <div class="logoroxa"><!--logo-->
+          <center>
+        <img src="images/Manoel-Syntax-roxo.png">
+          </center>
+        </div>
+        <div class="containertexto">
+        <div class="textalignleft">
+          <p>Manoel Syntax é um site que busca ser uma ferramenta de consulta de sintaxes das linguagens de programação, buscamos trazer as informações de maneira que, quem irá ler o conteúdo não tenha distrações provinientes de uma interface gráfica ruim.</p>
+        </div>
       </div>
-      <section class="sectionmain">
-         <div class="puts">
-            <button onclick="window.location.href ='telas/Pascal/flat_pascal.html'" >
-               <p>Pascal</p>
-            </button>
-            <button  onclick="window.location.href ='telas/Html/flat_Html.html'">
-               <p>Html</p>
-            </button>
-         </div>
+      <div class="containertextodireita">
+      <div class="apresentacao">
+        <video src="images/InShot_20211113_191814437.ogg" playsinline autoplay muted loop></video>
+      </div>
+        <div class="textalignright">
+          <h1>Rápida consulta</h1>
+          <p>Rápida navegação entre as páginas, sem enrolação! Com toques aos botões você tem sua consulta as tags! Explore, conheça as tags e atributos das linguagens. Clique abaixo e inicie sua experiência! Após sua experiência nos envie um feedback ou sugestão!</p>
+        </div>
+      </div>
+      <div class="botaodeacesso">
+        <button class="animacaodebotao" onclick ="window.location.href ='telas/Inicio/inicio.html'" >Acesse</button>
+      </div>
+      <div class="textossitereview"> 
+        <div class="formcontainer">
+          <h1>
+            Adicione seu feedback!
+          </h1>
+          <form action="#" class="form-contact" method="post" tabindex="1">
+            Endereço eletrônico:
+            <input type="email" class="form-contact-input" name="email" placeholder="Email" required />
+            Opinião:
+            <textarea class="form-contact-textarea" name="conteudo" placeholder="Deixe uma mensagem" required></textarea>
+            <button type="submit" class="form-contact-button">Enviar</button>
+          </form>
+        </div>
+        </div>
+      </div>
       </section>
-   </body>
+
+      <script>
+        function goBack() {
+            window.history.back()
+        }
+      </script>
+  </body>
 </html>

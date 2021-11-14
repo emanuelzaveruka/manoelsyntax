@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../../StylesSheet/styles.css">
         <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
-        <title>Document</title>
+        <link rel='icon' type='image/png' href="../../../images/icontitle.png">
+        <title>Manoel Syntax</title>
     </head>
     <body>
         <div class="barramobile">
@@ -196,7 +197,7 @@
                     <!--menu-->
                     <button class="btn" onclick="goBack()"></button>
                 </div>
-                <input class="input"id="review" type="button" onclick ="window.location.href ='../../../telas/rewiew/rewiew.html'">
+                <input class="input"id="review" type="button" onclick ="window.location.href ='../../../index.html'">
                 <div class="logo">
                    <!--logo-->
                    <label for="review">
@@ -414,7 +415,7 @@
             break;
                     }
                     case '2':{
-                     htmlContent = '<h1>Var</h1><p> A <b>var</b> é utilizada na declaração das variáveis que serão utilizadas durante a execução de um programa, bem como, também o seu tipo. Como exemplo: <br><br> <b>var</b> <br> nome : <b>string</b>; <br> idade : <b>integer</b>; <br> altura : <b>real</b>; <br><br> As variaveis podem ser decladas dessa forma também: <br><br> <b>var</b> <br> A,B,C : <b>integer</b>;</p>';
+                     htmlContent = ("<h1>Var</h1><p> A <b>var</b> é utilizada na declaração das variáveis que serão utilizadas durante a execução de um programa, bem como, também o seu tipo. Como exemplo:</p><br><br> <pre> <b>var</b> <br> nome : <b>string</b>; <br> idade : <b>integer</b>; <br> altura : <b>real</b>; <br><br> As variaveis podem ser decladas dessa forma também: <br><br> <b>var</b> <br> A,B,C : <b>integer</b>;</pre>");
             break;
                     }
                     case '3':{
@@ -466,8 +467,8 @@
             break;
                     }
                   }
-                  
                   targetDiv.innerHTML = htmlContent;
+                  document.querySelector(".barramobile").style.left = "-300px";
                 }
             
                     function goBack() {

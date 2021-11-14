@@ -6,7 +6,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="../../../StylesSheet/styles.css">
       <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
-      <title>Document</title>
+      <link rel='icon' type='image/png' href="../../../images/icontitle.png">
+      <title>Manoel Syntax</title>
    </head>
    <body>
       <div class="barramobile">
@@ -330,7 +331,7 @@
                   <button class="btn" onclick="goBack()"></button>
                </div>
                <!--botao dentro do menu-->
-               <input class="input"id="review" type="button" onclick ="window.location.href ='../../../telas/rewiew/rewiew.html'">
+               <input class="input"id="review" type="button" onclick ="window.location.href ='../../../index.html'">
                <div class="logo">
                   <!--logo-->
                   <label for="review">
@@ -781,8 +782,8 @@
          break;
                  }
                }
-               
-               targetDiv.innerHTML = htmlContent;
+                  targetDiv.innerHTML = htmlContent;
+                  document.querySelector(".barramobile").style.left = "-300px";
              }
          
                  function goBack() {

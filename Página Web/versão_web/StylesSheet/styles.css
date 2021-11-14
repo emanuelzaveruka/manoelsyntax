@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 	font-family: "Montseerat", sans-serif;
 }
-
+/*CLASSE CENTER É A BARRA SUPERIOR*/
 .center {
 	width: 100%;
 	margin: 0 auto;
@@ -18,6 +18,56 @@
 	background-color: #266AE7;
 	justify-content: space-between;
 }
+/*CLASSE CENTER É A BARRA SUPERIOR*/
+/*CLASSE CENTERHEADER ONDE SE MODIFICA DE ACORDO COM A TELA*/
+.centerheader{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: center;
+	background-color: #266AE7;
+	justify-content: space-between;
+}
+/*FIM DE CLASSE*/
+
+/*AJUSTE DE ACORDO COM A TELA*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.centerheader{
+		justify-content: flex-end;
+	}
+}
+
+
+/* All Mobile Sizes (devices and browser) */
+
+@media only screen and (max-width: 767px) {
+	.centerheader{
+		justify-content: flex-end;
+	}
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.centerheader{
+		justify-content: flex-end;
+	}
+}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+@media only screen and (max-width: 479px) {
+	.centerheader{
+		justify-content: flex-end;
+	}
+}
+
+/*FIM DE AJUSTE DE TELA*/
+
 
 .logo img {
 	max-width: 1080px;
@@ -287,7 +337,7 @@ section.main {
 
 .logoroxa img {
 	align-self: center;
-	max-width: 60%;
+	max-width: 100%;
 	/* Máximo da largura da imagem */
 	max-height: 25%;
 	/* Máximo da altura da imagem */
@@ -296,8 +346,6 @@ section.main {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	opacity: 1.0;
-	/*esta linha é a que clareia a imagem*/
-	cursor: pointer;
 }
 
 
@@ -306,7 +354,7 @@ section.main {
 
 /*imagem de print*/
 
-.apresentacao img {
+.apresentacao video {
 	flex-direction: initial;
 	max-width: 450px;
 	/* Máximo da largura da imagem */
@@ -337,20 +385,48 @@ section.main {
 	justify-content: space-between;
 	margin-block-end: 90px;
 }
-
+/*Alinhamento dos texto para a direita*/
 .textalignright {
 	margin-left: 50px;
 	max-width: 100vw;
 	width: auto;
 	text-align: right;
 }
+.textalignright h1 {
+	text-align: right;
+	font-size: 48px;
+	color: #27235F;
+}
 
+.textalignright p {
+	margin-top: 35px;
+	text-align: right;
+	font-size: 24px;
+	color: #000;
+}
+
+/*Fim de alinhamento dos texto para a direita*/
+
+/*Alinhamentos de texto a esquerda*/
 .textalignleft {
 	max-width: 100vw;
 	width: 450px;
 	text-align: left;
 	margin-block-end: 90px;
 }
+.textalignleft h1 {
+	text-align: left;
+	font-size: 48px;
+	color: #27235F;
+}
+
+.textalignleft p {
+	margin-top: 35px;
+	text-align: left;
+	font-size: 24px;
+	color: #000;
+}
+/*Fim alinhamentos de texto a esquerda*/
 
 .textossitereview {
 	color: #27235F;
@@ -369,7 +445,48 @@ section.main {
 
 /*fim de alinhamentos de texto no site*/
 
+/*BOTÃO DE ACESSO A PÁGINA INCIAL*/
+.botaodeacesso button{
+	width: 100%;
+	font-size: 18px;
+	border-radius: 15px;
+	color: #27235F;
+	height: 50px;
+	opacity: .8;
+	margin-top: 20px;
+	cursor: pointer;
+	background-color: #F5F5F5;
+	border: 1px solid #27235F;
+}
+.animacaodebotao{
+	animation-name: animacaodebotao;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes animacaodebotao{
+	0% {
+		background-color: #F5F5F5;
+	}
+	50%{
+		background-color: #C6D1E8;
+	}
+	100%{
+		background-color: #F5F5F5;
+	}
+}
+@-o-keyframes animacaodebotao{
+	0% {
+		background-color: #F5F5F5;
+	}
+	50%{
+		background-color: #C6D1E8;
+	}
+	100%{
+		background-color: #F5F5F5;
+	}
+}
 
+/*FIM DE BOTÃO DE ACESSO A PÁGINA INCIAL */
 /*FORMULARIO*/
 
 .formcontainer {
@@ -514,15 +631,16 @@ com as telas */
 	}
 	.textalignright {
 		justify-content: right;
+		margin-left: 0px;
 	}
-	.apresentacao img {
+	.apresentacao video {
 		max-height: 500px;
 		margin-block-end: 90px;
 	}
 }
 
 @media only screen and(max-width: 350px) {
-	.apresentacao img {
+	.apresentacao video {
 		max-height: 350px;
 	}
 }
