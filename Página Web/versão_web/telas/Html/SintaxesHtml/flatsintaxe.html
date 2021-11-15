@@ -1,795 +1,439 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../../../StylesSheet/styles.css">
-      <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
-      <link rel='icon' type='image/png' href="../../../images/icontitle.png">
-      <title>Manoel Syntax</title>
-   </head>
-   <body>
-      <div class="barramobile">
-         <nav class="navmobile">
-            <div class="margemnav">
-               <input class="input" id="html" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
-               <label for="html">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&lthtml&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="head" type="button" name="radiobutton" value="2" onclick = "populateData(event)">
-               <label for="head">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&lthead&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="title" type="button" name="radiobutton" value="3" onclick = "populateData(event)">
-               <label for="title">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&lttitle&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="body" type="button" name="radiobutton" value="4" onclick = "populateData(event)">
-               <label for="body">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltbody&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="bgcolor" type="button" name="radiobutton" value="5" onclick = "populateData(event)">
-               <label for="bgcolor">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltbgcolor&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="background" type="button" name="radiobutton" value="6" onclick = "populateData(event)">
-               <label for="background">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltbackground&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="h" type="button" name="radiobutton" value="7" onclick = "populateData(event)">
-               <label for="h">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltH1&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="b" type="button" name="radiobutton" value="8" onclick = "populateData(event)">
-               <label for="b">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltB&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="i" type="button" name="radiobutton" value="9" onclick = "populateData(event)">
-               <label for="i">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltI&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="u" type="button" name="radiobutton" value="10" onclick = "populateData(event)">
-               <label for="u">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltU&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="sup" type="button" name="radiobutton" value="11" onclick = "populateData(event)">
-               <label for="sup">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltSUP&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="sub" type="button" name="radiobutton" value="12" onclick = "populateData(event)">
-               <label for="sub">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltSUB&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="pre" type="button" name="radiobutton" value="13" onclick = "populateData(event)">
-               <label for="pre">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltPRE&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="p" type="button" name="radiobutton" value="14" onclick = "populateData(event)">
-               <label for="p">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltP&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="font" type="button" name="radiobutton" value="15" onclick = "populateData(event)">
-               <label for="font">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltFONT&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="br" type="button" name="radiobutton" value="16" onclick = "populateData(event)">
-               <label for="br">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltBR&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="hr" type="button" name="radiobutton" value="17" onclick = "populateData(event)">
-               <label for="hr">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltHR&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="img" type="button" name="radiobutton" value="18" onclick = "populateData(event)">
-               <label for="img">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltIMG&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="a" type="button" name="radiobutton" value="19" onclick = "populateData(event)">
-               <label for="a">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltA&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="ol" type="button" name="radiobutton" value="20" onclick = "populateData(event)">
-               <label for="ol">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltOL&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="table" type="button" name="radiobutton" value="21" onclick = "populateData(event)">
-               <label for="table">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltTABLE&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="caption" type="button" name="radiobutton" value="22" onclick = "populateData(event)">
-               <label for="caption">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltCAPTION&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="td" type="button" name="radiobutton" value="23" onclick = "populateData(event)">
-               <label for="td">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltTD&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="th" type="button" name="radiobutton" value="24" onclick = "populateData(event)">
-               <label for="th">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltTH&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="tr" type="button" name="radiobutton" value="25" onclick = "populateData(event)">
-               <label for="tr">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&ltTR&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-            </div>
-         </nav>
-      </div>
-
-         <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../StylesSheet/styles.css">
+        <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
+        <link rel='icon' type='image/png' href="../../../images/icontitle.png">
+        <title>Manoel Syntax</title>
+    </head>
+    <body>
+        <!--BOTÕES MOBILE-->
+        <div class="barramobile">
+            <nav class="navmobile">
+                <div id="menumobile" class="margemnav">
+                  <button id="html">html</button>
+                  <button id="head">head</button>
+                  <button id="title">title</button>
+                  <button id="body">body</button>
+                  <button id="bgcolor">bgcolor</button>
+                  <button id="background">background</button>
+                  <button id="h">h</button>
+                  <button id="b">b</button>
+                  <button id="i">i</button>
+                  <button id="u">u</button>
+                  <button id="sup">sup</button>
+                  <button id="sub">sub</button>
+                  <button id="pre">pre</button>
+                  <button id="p">p</button>
+                  <button id="font">font</button>
+                  <button id="br">br</button>
+                  <button id="hr">hr</button>
+                  <button id="img">img</button>
+                  <button id="a">a</button>
+                  <button id="ol">ol</button>
+                  <button id="table">table</button>
+                  <button id="caption">caption</button>
+                  <button id="td">td</button>
+                  <button id="th">th</button>
+                  <button id="tr">tr</button>
+                </div>
+            </nav>
+        </div>
+        <!--BOTÕES MOBILE-->
+        <!--HEADER-->
+        <header>
             <!--incio do header-->
             <div class="center">
-               <div class="imgmobile">
-                  <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
-                  <label for="checkmobile" id="icone">
-                  <img src="../../../images/icone.png">
-                  </label>
-               </div>
-               <div class="menu">
-                  <!--menu-->
-                  <button class="btn" onclick="goBack()"></button>
-               </div>
-               <!--botao dentro do menu-->
-               <input class="input"id="review" type="button" onclick ="window.location.href ='../../../index.html'">
-               <div class="logo">
-                  <!--logo-->
-                  <label for="review">
-                  <img src="../../../images/Manoel-Syntax.png">
-                  </label>
-               </div>
+                <div class="imgmobile">
+                    <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
+                    <label for="checkmobile" id="icone">
+                    <img src="../../../images/icone.png">
+                    </label>
+                </div>
+                <div class="menu">
+                    <!--menu-->
+                    <button class="btn" onclick="goBack()"></button>
+                </div>
+                <input class="input"id="review" type="button" onclick ="window.location.href ='../../../index.html'">
+                <div class="logo">
+                    <!--logo-->
+                    <label for="review">
+                    <img src="../../../images/Manoel-Syntax.png">
+                    </label>
+                </div>
             </div>
-         </header>
-         <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
-         <label for="checkmobile" id="icone">
-         <section id="flexContainer">
-            <nav class="navdesktop">
-               <div class="margemnav">
-               
-                  <input class="input" id="html" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
-                  <label for="html">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&lthtml&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="head" type="button" name="radiobutton" value="2" onclick = "populateData(event)">
-                  <label for="head">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&lthead&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="title" type="button" name="radiobutton" value="3" onclick = "populateData(event)">
-                  <label for="title">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&lttitle&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="body" type="button" name="radiobutton" value="4" onclick = "populateData(event)">
-                  <label for="body">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltbody&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="bgcolor" type="button" name="radiobutton" value="5" onclick = "populateData(event)">
-                  <label for="bgcolor">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltbgcolor&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="background" type="button" name="radiobutton" value="6" onclick = "populateData(event)">
-                  <label for="background">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltbackground&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="h" type="button" name="radiobutton" value="7" onclick = "populateData(event)">
-                  <label for="h">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltH1&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="b" type="button" name="radiobutton" value="8" onclick = "populateData(event)">
-                  <label for="b">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltB&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="i" type="button" name="radiobutton" value="9" onclick = "populateData(event)">
-                  <label for="i">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltI&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="u" type="button" name="radiobutton" value="10" onclick = "populateData(event)">
-                  <label for="u">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltU&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="sup" type="button" name="radiobutton" value="11" onclick = "populateData(event)">
-                  <label for="sup">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltSUP&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="sub" type="button" name="radiobutton" value="12" onclick = "populateData(event)">
-                  <label for="sub">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltSUB&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="pre" type="button" name="radiobutton" value="13" onclick = "populateData(event)">
-                  <label for="pre">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltPRE&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="p" type="button" name="radiobutton" value="14" onclick = "populateData(event)">
-                  <label for="p">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltP&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="font" type="button" name="radiobutton" value="15" onclick = "populateData(event)">
-                  <label for="font">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltFONT&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="br" type="button" name="radiobutton" value="16" onclick = "populateData(event)">
-                  <label for="br">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltBR&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="hr" type="button" name="radiobutton" value="17" onclick = "populateData(event)">
-                  <label for="hr">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltHR&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="img" type="button" name="radiobutton" value="18" onclick = "populateData(event)">
-                  <label for="img">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltIMG&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="a" type="button" name="radiobutton" value="19" onclick = "populateData(event)">
-                  <label for="a">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltA&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="ol" type="button" name="radiobutton" value="20" onclick = "populateData(event)">
-                  <label for="ol">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltOL&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="table" type="button" name="radiobutton" value="21" onclick = "populateData(event)">
-                  <label for="table">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltTABLE&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="caption" type="button" name="radiobutton" value="22" onclick = "populateData(event)">
-                  <label for="caption">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltCAPTION&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="td" type="button" name="radiobutton" value="23" onclick = "populateData(event)">
-                  <label for="td">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltTD&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="th" type="button" name="radiobutton" value="24" onclick = "populateData(event)">
-                  <label for="th">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltTH&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="tr" type="button" name="radiobutton" value="25" onclick = "populateData(event)">
-                  <label for="tr">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&ltTR&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-            
-            
-            </div>
-         </nav>
+        </header>
+        <!--HEADER-->
+        <section id="flexContainer">
+            <!--BOTÕES DO MENU LATERAL-->
+            <nav  class="navdesktop">
+                <div id="menu" class="margemnav">
+                    <button id="html">html</button>
+                    <button id="head">head</button>
+                    <button id="title">title</button>
+                    <button id="body">body</button>
+                    <button id="bgcolor">bgcolor</button>
+                    <button id="background">background</button>
+                    <button id="h">h</button>
+                    <button id="b">b</button>
+                    <button id="i">i</button>
+                    <button id="u">u</button>
+                    <button id="sup">sup</button>
+                    <button id="sub">sub</button>
+                    <button id="pre">pre</button>
+                    <button id="p">p</button>
+                    <button id="font">font</button>
+                    <button id="br">br</button>
+                    <button id="hr">hr</button>
+                    <button id="img">img</button>
+                    <button id="a">a</button>
+                    <button id="ol">ol</button>
+                    <button id="table">table</button>
+                    <button id="caption">caption</button>
+                    <button id="td">td</button>
+                    <button id="th">th</button>
+                    <button id="tr">tr</button>
+                </div>
+            </nav>
+            <!--BOTÕES DO MENU LATERAL-->
+            <input class="input" type="checkbox" id="checklateral" onclick = "fechabarra()">
+            <label for="checklateral" id="icone">
             <section id="content">
-               <div class="textopgleitura" id="conteudo">
-               </div>
+                    <!--CONTEUDO-->
+                    <div class="textopgleitura" id="all">
+                        <!--------------HTML--------------->
+                        <div  id="html">
+                            <h1>< HTML ></h1>
+                            <p>Todo o documento HTML fica contido entre os TAGS: &ltHTML&gt e &lt/HTML&gt.
+                                Uma página HTML possui três partes básicas: estrutura principal, um cabeçalho e um corpo de página.
+                            </p>
+                            <xmp>
+                                <html> <!--Estrutura principal-->
+
+                                </html> <!--Estrutura principal-->
+                            </xmp>
+                        </div>
+                        <!--------------------------------->
+                        <!------------HEAD----------------->
+                        <div id="head">
+                            <h1>< HEAD ></h1>
+                            <p>Usado para indicar parâmetros de configuração do documento,
+                                também utilizado para exibir o título na barra de títulos do browser.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!------------TITLE----------------->
+                        <div id="title">
+                            <h1>< TITLE ></h1>
+                            <p>Indica o título do documento para o browser.
+                                Esta TAG deve estar sempre dentro das TAGs &ltHEAD&gt  &lt/HEAD&gt.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!-------------BODY----------------->
+                        <div id="body">
+                            <h1>< BODY ></h1>
+                            <p>Envolvem a seção de corpo do documento.
+                                Aqui fica o conteúdo principal da Home Page.
+                            </p>
+                        </div>
+                        <!--------------BGCOLOR------------->
+                        <div id="bgcolor">
+                            <h1>< BGCOLOR ></h1>
+                            <p>O atributo Bgcolor é usado para estabelecer cor de plano de fundo
+                                em um parágrafo, tabela ou qualquer outra parte do HTML.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!-----------BACKGROUND------------->
+                        <div id="background">
+                            <h1>< BACKGROUND ></h1>
+                            <p>A propriedade Background permite que você controle a cor do plano de fundo de
+                                um elemento, configure uma imagem como plano de fundo, e posicione uma imagem em uma página.
+                            </p>
+                        </div>
+                        <!----------------H----------------->
+                        <div id="h">
+                            <h1>< H1 ></h1>
+                            <p>As tags &lth1&gt e &lth6&gt são usadas para definir cabeçalhos HTML.
+                                <br><br>
+                            <h1 class='x'>Conteúdo em &lth1&gt</h1>
+                            <h2>Conteúdo em &lth2&gt</h2>
+                            <h3>Conteúdo em &lth3&gt</h3>
+                            <h4>Conteúdo em &lth4&gt</h4>
+                            <h5>Conteúdo em &lth5&gt></h5>
+                            <h6>Conteúdo em &lth6&gt</h6>
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!---------------B------------------>
+                        <div id="b">
+                            <h1>< B ></h1>
+                            <p>&ltb&gt &lt/b&gt Aplica o estilo <b>negrito</b>.</p>
+                        </div>
+                        <!---------------------------------->
+                        <!---------------I------------------>
+                        <div id="i">
+                            <h1>< I ></h1>
+                            <p>&lti&gt &lt/i&gt Aplica o estilo <i>itálico</i>.</p>
+                        </div>
+                        <!---------------------------------->
+                        <!---------------U------------------>
+                        <div id="u">
+                            <h1>< U ></h1>
+                            <p>&ltu&gt &lt/u&gt Aplica o estilo <u>sublinhado</u>.</p>
+                        </div>
+                        <!---------------------------------->
+                        <!---------------SUP----------------->
+                        <div id="sup">
+                            <h1>< SUP ></h1>
+                            <p>&ltsup&gt &lt/sup&gt Faz com que o texto fique <sup>sobrescrito</sup>.</p>
+                        </div>
+                        <!---------------------------------->
+                        <!---------------SUB---------------->
+                        <div id="sub">
+                            <h1>< SUB ></h1>
+                            <p>&ltsub&gt &lt/sub&gt Faz com que o texto fique 
+                                <sub>subscrito</sub>.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!--------------PRE----------------->
+                        <div id="pre">
+                            <h1>< PRE ></h1>
+                            <p>&ltpre&gt &lt/pre&gt 
+                            <pre>Utiliza a pré-formatação, ou seja, deixa o texto da maneira em que foi digitado.</pre>
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!----------------P----------------->
+                        <div id="p">
+                            <h1>< P ></h1>
+                            <p>&ltp&gt &lt/p&gt A TAG responsável pela quebra de parágrafos é a &ltp&gt que finaliza
+                                o parágrafo e insere automaticamente uma linha em branco entre parágrafos.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!--------------FONT---------------->
+                        <div id="font">
+                            <h1>< FONT ></h1>
+                            <p>Para inserir em sua página um texto com fontes de tamanhos,
+                                cores e tipos diferentes utilizamos a TAG &ltFONT&gt ... &lt/FONT&gt
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!----------------BR---------------->
+                        <div id="br">
+                            <h1>< BR ></h1>
+                            <p>A tag &ltBR&gt faz a quebra de linha sem acrescentar espaços extras entre linhas.
+                                Finaliza a linha de texto e insere automaticamente uma outra linha em branco.
+                                Não precisa ser finaliza com &lt/BR&gt.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!----------------HR---------------->
+                        <div id="hr">
+                            <h1>< HR ></h1>
+                            <p>Desenha uma linha horizontal no documento.
+                                Não precisa ser finalizada com &lt/HR&gt.
+                            </p>
+                            <br>
+                            <hr>
+                        </div>
+                        <!---------------------------------->
+                        <!---------------IMG---------------->
+                        <div id="img">
+                            <h1>< img src ></h1>
+                            <p>Para inserir uma imagem em uma página web utilizamos o comando,
+                                tag, &ltimg src='nomedaimagem.jpg'&gt e seus atributos.
+                                Os formatos mais usados são o GIF e o JPG, ambos com compactação de pixels.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!----------------A---------------->
+                        <div id="a">
+                            <h1>< A ></h1>
+                            <p>Para linkar as páginas é utilizado a tag &lta href='NomeDoArquivo.extensão'&gt &lt/a&gt 
+                                é necessário especificar o nome do arquivo que será chamado e a sua extensão.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!----------------OL---------------->
+                        <div id="ol">
+                            <h1>< OL ></h1>
+                            <p>Listas ordenadas são também denominadas listas numeradas,
+                                pois, quando um navegador encontra uma TAG, iniciando uma lista ordenada,
+                                ele passa a mostrar cada item utilizando números, como 1, 2, 3, e assim sucessivamente.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!-------------TABLE--------------->
+                        <div id="table">
+                            <h1>< TABLE ></h1>
+                            <p>A TAG &ltTABLE&gt é utilizada para a representação de dados tabulares. A estrutura e o conteúdo da tabela devem ficar dentro das TAGs
+                            <center>
+                                <br> <br> &ltTABLE BORDER &gt  
+                                <br>  &ltcaption&gt tabelas de numeros &lt/caption&gt 
+                                <br> &ltTD&gt Números&lt/TD&gt 
+                                <br> &ltTH&gt1&lt/TH&gt 
+                                <br> &ltTH&gt2&lt/TH&gt 
+                                <br> &ltTH&gt3&lt/TH&gt 
+                                <br> &ltTR&gt 
+                                <br> &ltTD&gt Números 2 &lt/TD&gt 
+                                <br> &ltTH&gt4&lt/TH&gt 
+                                <br> &ltTH&gt5&lt/TH&gt 
+                                <br> &ltTH&gt6&lt/TH&gt 
+                                <br> &lt/TABLE&gt <br> 
+                                <br>  
+                                <TABLE BORDER >
+                                    <caption> tabelas de numeros </caption>
+                                    <TD> Números</TD>
+                                    <TH>1</TH>
+                                    <TH>2</TH>
+                                    <TH>3</TH>
+                                    <TR>
+                                        <TD> Números 2 </TD>
+                                        <TH>4</TH>
+                                        <TH>5</TH>
+                                        <TH>6</TH>
+                                </TABLE>
+                            </center>
+                        </div>
+                        <!---------------------------------->
+                        <!-------------CAPTION------------->
+                        <div id="caption">
+                            <h1>< CAPTION ></h1>
+                            <p>A TAG &ltCAPTION&gt especifica o título de uma tabela.</p>
+                        </div>
+                        <!---------------------------------->
+                        <!----------------TD---------------->
+                        <div id="td">
+                            <h1>< TD ></h1>
+                            <p>A TAG &ltTD&gt especifica a células de dados de uma tabela.
+                                Por se tratar de dados comuns (e não cabeçalhos),
+                                essas células possuem seu conteúdo escrito em fonte normal, 
+                                sem nenhum destaque e alinhamento à esquerda.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!----------------TH---------------->
+                        <div id="th">
+                            <h1>< TH ></h1>
+                            <p>A TAG &ltTH&gt é usada para especificar as células de cabeçalho da tabela.
+                                Essas células são diferentes das outras, pois seu conteúdo aparece geralmente em negrito.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                        <!----------------TR---------------->
+                        <div id="tr">
+                            <h1>< TR ></h1>
+                            <p>A TAG &ltTR&gt indica o início de uma linha na tabela. 
+                                Cada linha da tabela pode conter várias células, e, portanto, 
+                                é necessário que se faça uso de uma marcação que indique exatamente o 
+                                ponto de quebra de uma linha e início de outra.
+                            </p>
+                        </div>
+                        <!---------------------------------->
+                    </div>
+                    <!--CONTEUDO-->
             </section>
-         </div>
+            
+            </div>
          </section>
          </label>
-      
       <script>
 
-         var checkbox = document.getElementById('checkmobile');
-         function animacaodebarra(){
+            //função que abre barra quando clicado no icone
+            /*---------------------------------------------------*/
+            var checkbox = document.getElementById('checkmobile');
+            
+            function animacaodebarra(){
+            
+            if(checkbox.checked) {
+              document.querySelector(".barramobile").style.left = "0px";
+            } else {
+              document.querySelector(".barramobile").style.left = "0px";
+            }
+            }
+            /*---------------------------------------------------*/
 
-         if(checkbox.checked) {
-           document.querySelector(".barramobile").style.left = "0px";
-         } else {
-           document.querySelector(".barramobile").style.left = "-300px";
-         }
-         }
-         
-         //script que muda o conteudo quando clicado
-         var targetDiv = document.getElementById('conteudo');
-         
-         var htmlContent = ''; 
-         
+            //função que fecha a barra quando clicado fora da barra
+            /*---------------------------------------------------*/            
+            var checkbox = document.getElementById('checklateral');
+            function fechabarra(){
+            
+            if(checkbox.checked) {
+              document.querySelector(".barramobile").style.left = "-300px";
+            } else {
+              document.querySelector(".barramobile").style.left = "-300px";
+              console.log("1");
+            }
+            }
+            /*---------------------------------------------------*/            
+            //FUNÇÃO DO MENU DESKTOP
+            /*---------------------------------------------------*/               
+            function tableshowhide(a,b,c){
+            
+            len = menu.childElementCount;
+            console.log(len)
+            closeall();
+            
+            for(i=0;i<len;i++){
+                menu.children[i].onclick=function(){
+                    closeall();
+                    all.children[this.id].style.display="block";
+                    
+                }
+            }
+            
+            function closeall(){
+                for(i=0;i<all.childElementCount;i++){
+                    all.children[i].style.display="none";
+                }
+            }
+            
+            menu.children[c].onclick();
+            }
+            
+            tableshowhide("menu","all","html");
+            /*---------------------------------------------------*/   
 
-         document.querySelector('#conteudo').innerHTML = '<h1>< HTML ></h1><p>Todo o documento HTML fica contido entre os TAGS: &ltHTML&gt e &lt/HTML&gt. Uma página HTML possui três partes básicas: estrutura principal, um cabeçalho e um corpo de página.</p>';
-
-         function populateData(event){
-         
-               switch(event.target.value){
-                  case '1':{
-                  htmlContent = '<h1>< HTML ></h1><p>Todo o documento HTML fica contido entre os TAGS: &ltHTML&gt e &lt/HTML&gt. Uma página HTML possui três partes básicas: estrutura principal, um cabeçalho e um corpo de página.</p>';
-         break;
-                 }
-                 case '2':{
-                   htmlContent = "<h1>< HEAD ></h1><p>Usado para indicar parâmetros de configuração do documento, também utilizado para exibir o título na barra de títulos do browser.</p>";
-         break;
-                 }
-                 case '3':{
-                   htmlContent = "<h1>< TITLE ></h1><p>Indica o título do documento para o browser. Esta TAG deve estar sempre dentro das TAGs &ltHEAD&gt  &lt/HEAD&gt.</p>";
-         break;
-                 }
-                 case '4':{
-                   htmlContent = "<h1>< BODY ></h1><p>Envolvem a seção de corpo do documento. Aqui fica o conteúdo principal da Home Page.</p>";
-         break;
-                 }
-                 case '5':{
-                   htmlContent = "<h1>< BGCOLOR ></h1><p>O atributo Bgcolor é usado para estabelecer cor de plano de fundo em um parágrafo, tabela ou qualquer outra parte do HTML.</p>";
-         break;
-                 }
-                 case '6':{
-                   htmlContent = "<h1>< BACKGROUND ></h1><p>A propriedade Background permite que você controle a cor do plano de fundo de um elemento, configure uma imagem como plano de fundo, e posicione uma imagem em uma página.</p>";
-         break;
-                 }
-                 case '7':{
-                   htmlContent = "<h1>< H1 ></h1><p>As tags &lth1&gt e &lth6&gt são usadas para definir cabeçalhos HTML.<br><br><h1 class='x'>Conteúdo em &lth1&gt</h1><h2>Conteúdo em &lth2&gt</h2><h3>Conteúdo em &lth3&gt</h3><h4>Conteúdo em &lth4&gt</h4><h5Conteúdo em &lth5&gt></h5><h6>Conteúdo em &lth6&gt</h6></p>";
-         break;
-                 }
-                 case '8':{
-                   htmlContent = "<h1>< B ></h1><p>&ltb&gt &lt/b&gt Aplica o estilo <b>negrito</b>.</p>";
-         break;
-                 }
-                 case '9':{
-                   htmlContent = "<h1>< I ></h1><p>&lti&gt &lt/i&gt Aplica o estilo <i>itálico</i>.</p>";
-         break;
-                 }
-                 case '10':{
-                   htmlContent = "<h1>< U ></h1><p>&ltu&gt &lt/u&gt Aplica o estilo <u>sublinhado</u>.</p>";
-         break;
-                 }
-                 case '11':{
-                   htmlContent = "<h1>< SUP ></h1><p>&ltsup&gt &lt/sup&gt Faz com que o texto fique <sup>sobrescrito</sup>.</p>";
-         break;
-                 }
-                 case '12':{
-                   htmlContent = "<h1>< SUB ></h1><p>&ltsub&gt &lt/sub&gt Faz com que o texto fique <sub>subscrito</sub>.</p>";
-         break;
-                 }
-                 case '13':{
-                   htmlContent = "<h1>< PRE ></h1><p>&ltpre&gt &lt/pre&gt <pre>Utiliza a pré-formatação, ou seja, deixa o texto da maneira em que foi digitado.</pre></p>";
-         break;
-                 }
-                 case '14':{
-                   htmlContent = "<h1>< P ></h1><p>&ltp&gt &lt/p&gt A TAG responsável pela quebra de parágrafos é a &ltp&gt que finaliza o parágrafo e insere automaticamente uma linha em branco entre parágrafos.</p>";
-         break;
-                 }
-                 case '15':{
-                   htmlContent = "<h1>< FONT ></h1><p>Para inserir em sua página um texto com fontes de tamanhos, cores e tipos diferentes utilizamos a TAG &ltFONT&gt ... &lt/FONT&gt</p>";
-         break;
-                 }
-                 case '16':{
-                   htmlContent = "<h1>< BR ></h1><p>A tag &ltBR&gt faz a quebra de linha sem acrescentar espaços extras entre linhas. Finaliza a linha de texto e insere automaticamente uma outra linha em branco. Não precisa ser finaliza com &lt/BR&gt.</p>";
-         break;
-                 }
-                 case '17':{
-                   htmlContent = "<h1>< HR ></h1><p>Desenha uma linha horizontal no documento. Não precisa ser finalizada com &lt/HR&gt.</p><br><hr>";
-         break;
-                 }
-                 case '18':{
-                   htmlContent = "<h1>< img src ></h1><p>Para inserir uma imagem em uma página web utilizamos o comando, tag, &ltimg src='nomedaimagem.jpg'&gt e seus atributos. Os formatos mais usados são o GIF e o JPG, ambos com compactação de pixels.</p>";
-         break;
-                 }
-                 case '19':{
-                   htmlContent = "<h1>< A ></h1><p>Para linkar as páginas é utilizado a tag &lta href='NomeDoArquivo.extensão'&gt &lt/a&gt é necessário especificar o nome do arquivo que será chamado e a sua extensão.</p>";
-         break;
-                 }
-                 case '20':{
-                   htmlContent = "<h1>< OL ></h1><p>Listas ordenadas são também denominadas listas numeradas, pois, quando um navegador encontra uma TAG, iniciando uma lista ordenada, ele passa a mostrar cada item utilizando números, como 1, 2, 3, e assim sucessivamente.</p>";
-         break;
-                 }
-                 case '21':{
-                   htmlContent = "<h1>< TABLE ></h1><p>A TAG &ltTABLE&gt é utilizada para a representação de dados tabulares. A estrutura e o conteúdo da tabela devem ficar dentro das TAGs<center><br> <br> &ltTABLE BORDER &gt  <br>  &ltcaption&gt tabelas de numeros &lt/caption&gt <br> &ltTD&gt Números&lt/TD&gt <br> &ltTH&gt1&lt/TH&gt <br> &ltTH&gt2&lt/TH&gt <br> &ltTH&gt3&lt/TH&gt <br> &ltTR&gt <br> &ltTD&gt Números 2 &lt/TD&gt <br> &ltTH&gt4&lt/TH&gt <br> &ltTH&gt5&lt/TH&gt <br> &ltTH&gt6&lt/TH&gt <br> &lt/TABLE&gt <br> <br>  <TABLE BORDER > <caption> tabelas de numeros </caption> <TD> Números</TD> <TH>1</TH> <TH>2</TH> <TH>3</TH> <TR> <TD> Números 2 </TD> <TH>4</TH> <TH>5</TH> <TH>6</TH> </TABLE></center>";
-         break;
-                 }
-                 case '22':{
-                   htmlContent = "<h1>< CAPTION ></h1><p>A TAG &ltCAPTION&gt especifica o título de uma tabela.</p>";
-         break;
-                 }
-                 case '23':{
-                   htmlContent = "<h1>< TD ></h1><p>A TAG &ltTD&gt especifica a células de dados de uma tabela. Por se tratar de dados comuns (e não cabeçalhos), essas células possuem seu conteúdo escrito em fonte normal, sem nenhum destaque e alinhamento à esquerda.</p>";
-         break;
-                 }
-                 case '24':{
-                   htmlContent = "<h1>< TH ></h1><p>A TAG &ltTH&gt é usada para especificar as células de cabeçalho da tabela. Essas células são diferentes das outras, pois seu conteúdo aparece geralmente em negrito.";
-         break;
-                 }
-                 case '25':{
-                   htmlContent = "<h1>< TR ></h1><p>A TAG &ltTR&gt indica o início de uma linha na tabela. Cada linha da tabela pode conter várias células, e, portanto, é necessário que se faça uso de uma marcação que indique exatamente o ponto de quebra de uma linha e início de outra.</p>";
-         break;
-                 }
-               }
-                  targetDiv.innerHTML = htmlContent;
-                  document.querySelector(".barramobile").style.left = "-300px";
-             }
-         
-                 function goBack() {
-                     window.history.back()
-                 }
-               
-      </script>
-   </body>
+            //FUNÇÃO DO MENU MOBILE
+            /*---------------------------------------------------*/               
+            function tableshowhidemobile(a,b,c){
+            
+            len = menumobile.childElementCount;
+            console.log(len)
+            closeall();
+            
+            for(i=0;i<len;i++){
+                menumobile.children[i].onclick=function(){
+                    closeall();
+                    all.children[this.id].style.display="block";
+                    document.querySelector(".barramobile").style.left = "-300px";
+                }
+            }
+            
+            function closeall(){
+                for(i=0;i<all.childElementCount;i++){
+                    all.children[i].style.display="none";
+                }
+            }
+            
+            menumobile.children[c].onclick();
+            }
+            
+            tableshowhidemobile("menumobile","all","html");
+            /*---------------------------------------------------*/              
+            //FUNÇÃO DE VOLTAR A PÁGINA
+            /*---------------------------------------------------*/  
+                    function goBack() {
+                        window.history.back()
+                    }
+            /*---------------------------------------------------*/        
+        </script>
+    </body>
 </html>

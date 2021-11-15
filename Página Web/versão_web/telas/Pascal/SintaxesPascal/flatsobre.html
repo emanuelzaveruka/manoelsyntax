@@ -10,24 +10,16 @@
         <title>Manoel Syntax</title>
     </head>
     <body>
+        <!--BOTÕES MOBILE-->
         <div class="barramobile">
             <nav class="navmobile">
-                <div class="margemnav">
-                    <input class="input" id="program" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
-                    <label for="program">
-                        <div class="flat">
-                            <ul>
-                                <a>
-                                    <li>
-                                        <p>program</p>
-                                    </li>
-                                </a>
-                            </ul>
-                        </div>
-                    </label>
+                <div id="menumobile" class="margemnav">
+                    <button id="sobre">sobre</button>
                 </div>
             </nav>
         </div>
+        <!--BOTÕES MOBILE-->
+        <!--HEADER-->
         <header>
             <!--incio do header-->
             <div class="center">
@@ -41,7 +33,6 @@
                     <!--menu-->
                     <button class="btn" onclick="goBack()"></button>
                 </div>
-                <!--botao dentro do menu-->
                 <input class="input"id="review" type="button" onclick ="window.location.href ='../../../index.html'">
                 <div class="logo">
                     <!--logo-->
@@ -51,67 +42,126 @@
                 </div>
             </div>
         </header>
+        <!--HEADER-->
         <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
         <label for="checkmobile" id="icone">
             <section id="flexContainer">
-                <nav class="navdesktop">
-                    <div class="margemnav">
-                        <input class="input" id="program" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
-        <label for="program">
-        <div class="flat">
-        <ul>
-        <a>
-        <li>
-        <p>program</p>
-        </li>
-        </a>
-        </ul>
-        </div>
-        </label>
-        </div>
-        </nav>
-        <section id="content">
-        <div class="textopgleitura" id="conteudo">
-        </div>
-        </section>
-        </div>
-        </section>
+                <!--BOTÕES DO MENU LATERAL-->
+                <nav  class="navdesktop">
+                    <div id="menu" class="margemnav">
+                        <button id="sobre">sobre</button>
+                    </div>
+                </nav>
+                <!--BOTÕES DO MENU LATERAL-->
+                <input class="input" type="checkbox" id="checklateral" onclick = "fechabarra()">
+                <label for="checklateral" id="icone">
+                <section id="content">
+                    <!--CONTEUDO-->
+                    <div class="textopgleitura" id="all">
+                        <!----------PROGRAM-------------->
+                        <div class="f" id="sobre">
+                            <h1>Program</h1>
+                            <p>A sintaxe <b>program</b> é utilizada para se fazer a identificação do programa com um nome.
+                                 O cabeçalho de um programa é atribuído pela instrução program seguida de um nome.
+                                  Ao final do nome deve-se colocar o símbolo ponto-e-vírgula ( ; ). 
+                                  Não pode existir nenhuma variável no programa que tenha o mesmo nome dado ao programa. 
+                                  Como exemplo: <br><br> <b>program</b> SOMA_NUMERO; </p>
+                        </div>
+                    </div>
+                    <!--CONTEUDO-->
+                </section>
+                </div>
+            </section>
         </label>
         <script>
+            //função que abre barra quando clicado no icone
+            /*---------------------------------------------------*/
             var checkbox = document.getElementById('checkmobile');
+            
             function animacaodebarra(){
             
             if(checkbox.checked) {
               document.querySelector(".barramobile").style.left = "0px";
             } else {
+              document.querySelector(".barramobile").style.left = "0px";
+            }
+            }
+            /*---------------------------------------------------*/
+
+            //função que fecha a barra quando clicado fora da barra
+            /*---------------------------------------------------*/            
+            var checkbox = document.getElementById('checklateral');
+            function fechabarra(){
+            
+            if(checkbox.checked) {
               document.querySelector(".barramobile").style.left = "-300px";
+            } else {
+              document.querySelector(".barramobile").style.left = "-300px";
+              console.log("1");
             }
             }
+            /*---------------------------------------------------*/               
+            //FUNÇÃO DO MENU DESKTOP
+            /*---------------------------------------------------*/    
+            function tableshowhide(a,b,c){
             
-            //script que muda o conteudo quando clicado
-            var targetDiv = document.getElementById('conteudo');
+            len = menu.childElementCount;
+            console.log(len)
+            closeall();
             
-            var htmlContent = ''; 
-            
-            
-            document.querySelector('#conteudo').innerHTML = '<h1>Program</h1><p>A sintaxe <b>program</b> é utilizada para se fazer a identificação do programa com um nome. O cabeçalho de um programa é atribuído pela instrução program seguida de um nome. Ao final do nome deve-se colocar o símbolo ponto-e-vírgula ( ; ). Não pode existir nenhuma variável no programa que tenha o mesmo nome dado ao programa. Como exemplo: <br><br> <b>program</b> SOMA_NUMERO; </p>';
-            
-            function populateData(event){
-            
-                  switch(event.target.value){
-                    case '1':{
-                     htmlContent = '<h1>Program</h1><p>A sintaxe <b>program</b> é utilizada para se fazer a identificação do programa com um nome. O cabeçalho de um programa é atribuído pela instrução program seguida de um nome. Ao final do nome deve-se colocar o símbolo ponto-e-vírgula ( ; ). Não pode existir nenhuma variável no programa que tenha o mesmo nome dado ao programa. Como exemplo: <br><br> <b>program</b> SOMA_NUMERO;</p>';
-            break;
-                    }
-                  }
-                  targetDiv.innerHTML = htmlContent;
-                  document.querySelector(".barramobile").style.left = "-300px";
+            for(i=0;i<len;i++){
+                menu.children[i].onclick=function(){
+                    closeall();
+                    all.children[this.id].style.display="block";
+                    
                 }
+            }
             
+            function closeall(){
+                for(i=0;i<all.childElementCount;i++){
+                    all.children[i].style.display="none";
+                }
+            }
+            
+            menu.children[c].onclick();
+            }
+            
+            tableshowhide("menu","all","sobre");
+            /*---------------------------------------------------*/   
+
+            //FUNÇÃO DO MENU MOBILE
+            /*---------------------------------------------------*/  
+            function tableshowhidemobile(a,b,c){
+            
+            len = menumobile.childElementCount;
+            console.log(len)
+            closeall();
+            
+            for(i=0;i<len;i++){
+                menumobile.children[i].onclick=function(){
+                    closeall();
+                    all.children[this.id].style.display="block";
+                    document.querySelector(".barramobile").style.left = "-300px";
+                }
+            }
+            
+            function closeall(){
+                for(i=0;i<all.childElementCount;i++){
+                    all.children[i].style.display="none";
+                }
+            }
+            
+            menumobile.children[c].onclick();
+            }
+            
+            tableshowhidemobile("menumobile","all","sobre");
+            /*---------------------------------------------------*/              
+            //FUNÇÃO DE VOLTAR A PÁGINA
+            /*---------------------------------------------------*/  
                     function goBack() {
                         window.history.back()
                     }
-                  
+            /*---------------------------------------------------*/        
         </script>
     </body>
 </html>

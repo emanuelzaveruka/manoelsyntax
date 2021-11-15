@@ -1,149 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../../../StylesSheet/styles.css">
-      <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
-      <link rel='icon' type='image/png' href="../../../images/icontitle.png">
-      <title>Manoel Syntax</title>
-   </head>
-   <body>
-      <div class="barramobile">
-         <nav class="navmobile">
-            <div class="margemnav">
-               <input class="input" id="program" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
-               <label for="definicao">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&lthtml&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-               <input class="input" id="tags" type="checkbox" name="radiobutton" value="2" onclick = "populateData(event)">
-               <label for="tags">
-                  <div class="flat">
-                     <ul>
-                        <a>
-                           <li>
-                              <p>&lttags&gt</p>
-                           </li>
-                        </a>
-                     </ul>
-                  </div>
-               </label>
-            </div>
-         </nav>
-      </div>
-
-         <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../StylesSheet/styles.css">
+        <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
+        <link rel='icon' type='image/png' href="../../../images/icontitle.png">
+        <title>Manoel Syntax</title>
+    </head>
+    <body>
+        <!--BOTÕES MOBILE-->
+        <div class="barramobile">
+            <nav class="navmobile">
+                <div id="menumobile" class="margemnav">
+                  <button id="sobre">sobre</button>
+                  <button id="tags">tags</button>
+                </div>
+            </nav>
+        </div>
+        <!--BOTÕES MOBILE-->
+        <!--HEADER-->
+        <header>
             <!--incio do header-->
             <div class="center">
-               <div class="imgmobile">
-                  <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
-                  <label for="checkmobile" id="icone">
-                  <img src="../../../images/icone.png">
-                  </label>
-               </div>
-               <div class="menu">
-                  <!--menu-->
-                  <button class="btn" onclick="goBack()"></button>
-               </div>
-               <input class="input"id="review" type="button" onclick ="window.location.href ='../../../index.html'">
-               <div class="logo">
-                  <!--logo-->
-                  <label for="review">
-                  <img src="../../../images/Manoel-Syntax.png">
-                  </label>
-               </div>
+                <div class="imgmobile">
+                    <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
+                    <label for="checkmobile" id="icone">
+                    <img src="../../../images/icone.png">
+                    </label>
+                </div>
+                <div class="menu">
+                    <!--menu-->
+                    <button class="btn" onclick="goBack()"></button>
+                </div>
+                <input class="input"id="review" type="button" onclick ="window.location.href ='../../../index.html'">
+                <div class="logo">
+                    <!--logo-->
+                    <label for="review">
+                    <img src="../../../images/Manoel-Syntax.png">
+                    </label>
+                </div>
             </div>
-         </header>
-         <input class="input" type="checkbox" id="checkmobile" onclick = "animacaodebarra()">
-         <label for="checkmobile" id="icone">
-         <section id="flexContainer">
-            <nav class="navdesktop">
-               <div class="margemnav">
-                  <input class="input" id="definicao" type="checkbox" name="radiobutton" value="1" onclick = "populateData(event)">
-                  <label for="definicao">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&lthtml&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-                  <input class="input" id="tags" type="checkbox" name="radiobutton" value="2" onclick = "populateData(event)">
-                  <label for="tags">
-                     <div class="flat">
-                        <ul>
-                           <a>
-                              <li>
-                                 <p>&lttags&gt</p>
-                              </li>
-                           </a>
-                        </ul>
-                     </div>
-                  </label>
-            
-            
-            </div>
-         </nav>
+        </header>
+        <!--HEADER-->
+        <section id="flexContainer">
+            <!--BOTÕES DO MENU LATERAL-->
+            <nav  class="navdesktop">
+                <div id="menu" class="margemnav">
+                  <button id="sobre">sobre</button>
+                  <button id="tags">tags</button>
+                </div>
+            </nav>
+            <!--BOTÕES DO MENU LATERAL-->
+            <input class="input" type="checkbox" id="checklateral" onclick = "fechabarra()">
+            <label for="checklateral" id="icone">
             <section id="content">
-               <div class="textopgleitura" id="conteudo">
-               </div>
+
+                    <!--CONTEUDO-->
+                    <div class="textopgleitura" id="all">
+                     <div id="sobre">
+                        <h1>DEFINIÇÃO</h1>
+                        <p>HTML significa Hyper Text Markup Language e é a linguagem de marcação de hipertexto,
+                           ou seja, é a linguagem na qual são escritas as páginas da Web, interpretada pelo navegador.
+                           As informações estão ligadas na forma de páginas ligadas entre si.
+                           A página é transferida de um computador remoto para o usuário, onde o browser faz o trabalho de interpretar os códigos naquele documento
+                           e mostra a página que o usuário vê. A Web está estruturada em dois princípios básicos: HTTP(Hiper Text Transfer Protocol) e HTML (Hiper Text Markup Language);
+                            HTTP é o protocolo de transferência de hipertexto, ou seja, é o protocolo que permite a navegação na Web, com o simples clicar do mouse sobre o texto (ou imagem) que esteja associado a outro link.
+                        </p>
+                     </div>
+                     <!---------------------------------->
+                     <!---------------TAGS--------------->
+                     <div id="tags">
+                        <h1>TAGS</h1>
+                        <p>Os comandos HTML são chamados de TAGs, compreendem de marcas padrões que são utilizadas para fazer indicações a um browser.
+                            Assim como em outras linguagens, os comandos têm uma sintaxe própria, e seguem algumas regras:
+                            <br><br>As TAGs aparecem sempre entre sinais de “menor que” (<) e “maior que” (>); Geralmente são utilizadas aos pares,
+                             sendo que a TAG de finalização de um comando qualquer é finalizada com a precedência de uma barra (/).
+                        </p>
+                     </div>
+                    </div>
+                    <!--CONTEUDO-->
             </section>
-         </div>
-         </section>
-         </label>
-      
-      <script>
+            
+            </div>
+        </section>
+        </label>
+        <script>
 
-         var checkbox = document.getElementById('checkmobile');
-         function animacaodebarra(){
+            //função que abre barra quando clicado no icone
+            /*---------------------------------------------------*/
+            var checkbox = document.getElementById('checkmobile');
+            
+            function animacaodebarra(){
+            
+            if(checkbox.checked) {
+              document.querySelector(".barramobile").style.left = "0px";
+            } else {
+              document.querySelector(".barramobile").style.left = "0px";
+            }
+            }
+            /*---------------------------------------------------*/
 
-         if(checkbox.checked) {
-           document.querySelector(".barramobile").style.left = "0px";
-         } else {
-           document.querySelector(".barramobile").style.left = "-300px";
-         }
-         }
-         
-         //script que muda o conteudo quando clicado
-         var targetDiv = document.getElementById('conteudo');
-         
-         var htmlContent = ''; 
-         
+            //função que fecha a barra quando clicado fora da barra
+            /*---------------------------------------------------*/            
+            var checkbox = document.getElementById('checklateral');
+            function fechabarra(){
+            
+            if(checkbox.checked) {
+              document.querySelector(".barramobile").style.left = "-300px";
+            } else {
+              document.querySelector(".barramobile").style.left = "-300px";
+              console.log("1");
+            }
+            }
+            /*---------------------------------------------------*/            
+            //FUNÇÃO DO MENU DESKTOP
+            /*---------------------------------------------------*/               
+            function tableshowhide(a,b,c){
+            
+            len = menu.childElementCount;
+            console.log(len)
+            closeall();
+            
+            for(i=0;i<len;i++){
+                menu.children[i].onclick=function(){
+                    closeall();
+                    all.children[this.id].style.display="block";
+                    
+                }
+            }
+            
+            function closeall(){
+                for(i=0;i<all.childElementCount;i++){
+                    all.children[i].style.display="none";
+                }
+            }
+            
+            menu.children[c].onclick();
+            }
+            
+            tableshowhide("menu","all","sobre");
+            /*---------------------------------------------------*/   
 
-         document.querySelector('#conteudo').innerHTML = '<h1>DEFINIÇÃO</h1><p>HTML significa Hyper Text Markup Language e é a linguagem de marcação de hipertexto, ou seja, é a linguagem na qual são escritas as páginas da Web, interpretada pelo navegador. As informações estão ligadas na forma de páginas ligadas entre si. A página é transferida de um computador remoto para o usuário, onde o browser faz o trabalho de interpretar os códigos naquele documento e mostra a página que o usuário vê. A Web está estruturada em dois princípios básicos: HTTP(Hiper Text Transfer Protocol) e HTML (Hiper Text Markup Language). HTTP é o protocolo de transferência de hipertexto, ou seja, é o protocolo que permite a navegação na Web, com o simples clicar do mouse sobre o texto (ou imagem) que esteja associado a outro link.</p>';
-
-         function populateData(event){
-         
-               switch(event.target.value){
-                  case '1':{
-                htmlContent = '<h1>DEFINIÇÃO</h1><p>HTML significa Hyper Text Markup Language e é a linguagem de marcação de hipertexto, ou seja, é a linguagem na qual são escritas as páginas da Web, interpretada pelo navegador. As informações estão ligadas na forma de páginas ligadas entre si. A página é transferida de um computador remoto para o usuário, onde o browser faz o trabalho de interpretar os códigos naquele documento e mostra a página que o usuário vê. A Web está estruturada em dois princípios básicos: HTTP(Hiper Text Transfer Protocol) e HTML (Hiper Text Markup Language). HTTP é o protocolo de transferência de hipertexto, ou seja, é o protocolo que permite a navegação na Web, com o simples clicar do mouse sobre o texto (ou imagem) que esteja associado a outro link.</p>';
-       break;
-               }
-               case '2':{
-                htmlContent = '<h1>TAGS</h1><p>Os comandos HTML são chamados de TAGs, compreendem de marcas padrões que são utilizadas para fazer indicações a um browser. Assim como em outras linguagens, os comandos têm uma sintaxe própria, e seguem algumas regras:<br><br>As TAGs aparecem sempre entre sinais de “menor que” (<) e “maior que” (>); Geralmente são utilizadas aos pares, sendo que a TAG de finalização de um comando qualquer é finalizada com a precedência de uma barra (/).</p>';
-       break;
-               }
-               }
-               targetDiv.innerHTML = htmlContent;
-               document.querySelector(".barramobile").style.left = "-300px";
-             }
-         
-                 function goBack() {
-                     window.history.back()
-                 }
-               
-      </script>
-   </body>
+            //FUNÇÃO DO MENU MOBILE
+            /*---------------------------------------------------*/               
+            function tableshowhidemobile(a,b,c){
+            
+            len = menumobile.childElementCount;
+            console.log(len)
+            closeall();
+            
+            for(i=0;i<len;i++){
+                menumobile.children[i].onclick=function(){
+                    closeall();
+                    all.children[this.id].style.display="block";
+                    document.querySelector(".barramobile").style.left = "-300px";
+                }
+            }
+            
+            function closeall(){
+                for(i=0;i<all.childElementCount;i++){
+                    all.children[i].style.display="none";
+                }
+            }
+            
+            menumobile.children[c].onclick();
+            }
+            
+            tableshowhidemobile("menumobile","all","sobre");
+            /*---------------------------------------------------*/              
+            //FUNÇÃO DE VOLTAR A PÁGINA
+            /*---------------------------------------------------*/  
+                    function goBack() {
+                        window.history.back()
+                    }
+            /*---------------------------------------------------*/        
+        </script>
+    </body>
 </html>

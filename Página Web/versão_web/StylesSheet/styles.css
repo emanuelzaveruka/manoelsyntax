@@ -7,6 +7,13 @@
 	box-sizing: border-box;
 	font-family: "Montseerat", sans-serif;
 }
+body{
+	background-color: #F6F6F6;
+}
+xmp{
+	font-style: monospace;
+	font-size: 24px;
+}
 /*CLASSE CENTER É A BARRA SUPERIOR*/
 .center {
 	width: 100%;
@@ -163,6 +170,19 @@ header {
 	transition: all .2s linear;
 	left: -300px;
 	display: none;
+}
+.barramobile button{
+	background-color: #C6D1E8;
+	border: none;
+	color: #27235F;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 40px;
+	width: 100%;
+	margin-top: 15px;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.barramobile {
@@ -682,22 +702,41 @@ com as telas */
 .navdesktop {
 	background: #F5F5F5;
 	/* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
-	flex: 1 1 15%;
-	min-width: 150px;
+	min-width: 250px;
+	max-width: 250px;
 	padding: 3px;
+	height: 850px;
 	border-right: solid 3px;
 	border-color: #C6D1E8;
 	display: block;
 }
-
+.navdesktop button{
+	background-color: #C6D1E8;
+	border: none;
+	color: #27235F;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 40px;
+	width: 100%;
+	margin-top: 15px;
+	cursor: pointer;
+	transition: all .2s;
+}
+.navdesktop button:hover {
+	background-color: #a7b0c7b2;
+}
 #content {
-	min-height: 800px;
+    
 	background: #F5F5F5;
 	/* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
 	flex: 2 1 70%;
 	padding: 3px;
-}
+	width: auto;
 
+}
 
 /*-------------------------------------------------------------------------*/
 
