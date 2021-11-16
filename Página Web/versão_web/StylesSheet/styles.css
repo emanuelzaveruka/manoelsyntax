@@ -10,10 +10,7 @@
 body{
 	background-color: #F6F6F6;
 }
-xmp{
-	font-style: monospace;
-	font-size: 24px;
-}
+
 /*CLASSE CENTER É A BARRA SUPERIOR*/
 .center {
 	width: 100%;
@@ -705,7 +702,7 @@ com as telas */
 	min-width: 250px;
 	max-width: 250px;
 	padding: 3px;
-	height: 850px;
+	height: auto;
 	border-right: solid 3px;
 	border-color: #C6D1E8;
 	display: block;
@@ -734,10 +731,151 @@ com as telas */
 	/* Shorthand property specifying flex-grow, flex-shrink, and flex-basis. */
 	flex: 2 1 70%;
 	padding: 3px;
+	margin-block-end: 50px;
 	width: auto;
 
 }
+.codigos h6{
+	margin-top: 20px;
+	margin-right: 3px;
+	font-weight:normal;
+	font-family: monospace ;
+	font-size: 16px;
+	background-color: #C6D1E8;
+	max-width: 450px;
+	min-height: 150px;
+	height: auto;
+}
+.codigos b{
+	font-family: monospace ;
+	font-size: 16px;
+}
+.atributos{
+	margin-top: 30px;
+}
+.atributos h5{
+	margin-top: 25px;
+	text-align: left;
+	font-size: 28px;
+	color: #27235F;
+}
 
+/*SEÇÃO DE TEXTOS DA PÁGINA DE LEITURA*/
+
+.textopgleitura {
+	margin-top: 100px;
+	margin-left: 25px;
+	text-align: left;
+}
+
+.textopgleitura h1 {
+	text-align: left;
+	font-size: 48px;
+	color: #27235F;
+}
+
+.textopgleitura p {
+	margin-top: 35px;
+	text-align: left;
+	font-size: 24px;
+	color: #000;
+}
+
+
+/*SEÇÃO DE TEXTOS DA PÁGINA DE LEITURA*/
+
+/*-------------------------------------------------------------------------*/
+
+/*AJUSTES CONFORME O TAMANHO DE TELA DAS FONTES*/
+
+/*-------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.codigos b{
+		font-size: 16px;
+	}
+	.atributos h5{
+		font-size: 24px;
+	}
+	.codigos h6{
+		font-size: 16px;
+	}
+	.textopgleitura h1 {
+		font-size: 34px;
+	}
+	
+	.textopgleitura p {
+		font-size: 24px;
+	}
+}
+
+
+/* All Mobile Sizes (devices and browser) */
+
+@media only screen and (max-width: 767px) {
+	.codigos b{
+		font-size: 16px;
+	}
+	.atributos h5{
+		font-size: 24px;
+	}
+	.codigos h6{
+		font-size: 16px;
+	}
+	.textopgleitura h1 {
+		font-size: 34px;
+	}
+	
+	.textopgleitura p {
+		font-size: 18px;
+	}
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.codigos b{
+		font-size: 16px;
+	}
+	.atributos h5{
+		font-size: 24px;
+	}
+	.codigos h6{
+		font-size: 16px;
+	}
+	.textopgleitura h1 {
+		font-size: 34px;
+	}
+	
+	.textopgleitura p {
+		font-size: 18px;
+	}
+}
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+@media only screen and (max-width: 479px) {
+	.codigos b{
+		font-size: 16px;
+	}
+	.atributos h5{
+		font-size: 24px;
+	}
+	.codigos h6{
+		font-size: 16px;
+	}
+	.textopgleitura h1 {
+		font-size: 34px;
+	}
+	
+	.textopgleitura p {
+		font-size: 18px;
+	}
+}
+
+/*-------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------*/
 
 
@@ -783,29 +921,7 @@ com as telas */
 /*FIM DE SEÇÃO DE CONTAINERS DA PÁGINA DE LEITURA*/
 
 
-/*SEÇÃO DE TEXTOS DA PÁGINA DE LEITURA*/
 
-.textopgleitura {
-	margin-top: 100px;
-	margin-left: 25px;
-	text-align: left;
-}
-
-.textopgleitura h1 {
-	text-align: left;
-	font-size: 48px;
-	color: #27235F;
-}
-
-.textopgleitura p {
-	margin-top: 35px;
-	text-align: left;
-	font-size: 24px;
-	color: #000;
-}
-
-
-/*SEÇÃO DE TEXTOS DA PÁGINA DE LEITURA*/
 
 
 /*SEÇÃO DE BOTÕES DA PÁGINA DE LEITURA*/

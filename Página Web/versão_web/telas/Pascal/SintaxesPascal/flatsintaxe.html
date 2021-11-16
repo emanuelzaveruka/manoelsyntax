@@ -21,13 +21,9 @@
                     <button id="readln">readln</button>
                     <button id="writeln">writeln</button>
                     <button id="if">if</button>
-                    <button id="then">then</button>
-                    <button id="and">and</button>
-                    <button id="xor">xor</button>
-                    <button id="or">or</button>
+                    <button id="operadores">operadores</button>
                     <button id="for">for</button>
                     <button id="while">while</button>
-                    <button id="do">do</button>
                 </div>
             </nav>
         </div>
@@ -67,13 +63,9 @@
                     <button id="readln">readln</button>
                     <button id="writeln">writeln</button>
                     <button id="if">if</button>
-                    <button id="then">then</button>
-                    <button id="and">and</button>
-                    <button id="xor">xor</button>
-                    <button id="or">or</button>
+                    <button id="operadores">operadores</button>
                     <button id="for">for</button>
                     <button id="while">while</button>
-                    <button id="do">do</button>
                 </div>
             </nav>
             <!--BOTÕES DO MENU LATERAL-->
@@ -90,7 +82,12 @@
                                  O cabeçalho de um programa é atribuído pela instrução program seguida de um nome.
                                   Ao final do nome deve-se colocar o símbolo ponto-e-vírgula ( ; ). 
                                   Não pode existir nenhuma variável no programa que tenha o mesmo nome dado ao programa. 
-                                  Como exemplo: <br><br> <b>program</b> SOMA_NUMERO; </p>
+                                  Como exemplo: <br><br>
+                            <div class="codigos">
+                                <h6>
+                                    <b>program</b> SOMA_NUMERO; </p>
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
                         <!------------VAR------------------>
@@ -98,14 +95,19 @@
                             <h1>Var</h1>
                             <p> A <b>var</b> é utilizada na declaração das variáveis que serão utilizadas durante
                                 a execução de um programa, bem como, também o seu tipo. Como exemplo:
-                            </p><pre> 
+                            </p>
+                            <div class="codigos">
+                                <h6>
+                                program SOMA_NUMERO;<br>
                                 <b>var</b> 
                                 <br> nome : <b>string</b>; 
                                 <br> idade : <b>integer</b>; 
                                 <br> altura : <b>real</b>;
-                                 <br><br> As variaveis podem ser decladas dessa forma também: 
-                                 <br><br> <b>var</b> <br> A,B,C :
-                                <b>integer</b>;</pre>
+                                 <br><br>// As variaveis podem ser decladas dessa forma também: 
+                                 <br> <br> A,B,C :
+                                <b>integer</b>;
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
 
@@ -115,7 +117,15 @@
                             <h1>Begin</h1>
                             <p> A sintaxe <b>begin</b> inicia a compilação dos códigos contidos no programa.
                                  Como exemplo: <br> <br> <b>begin</b><br>instruções do código;</p>
-                        
+                                 <div class="codigos">
+                                    <h6>
+                                    program SOMA_NUMERO;<br><br>
+                                    var <br><br>
+                                    A,B,C : integer;<br><br>
+                                    <b>begin</b><br><br>
+                                    //inicio de código
+                                    </h6>
+                                </div>
                         </div>
                         <!---------------------------------->
 
@@ -125,16 +135,37 @@
                             <h1>End</h1>
                             <p> A sintaxe <b>end</b> encerra a compilação do programa.
                                  Como exemplo: 
-                                 <br><br> <b>begin</b><br>instruções do código;<br><b>end.</b></p>
-                        
+                                 <div class="codigos">
+                                    <h6>
+                                    program SOMA_NUMERO;<br><br>
+                                    var <br><br>
+                                    A,B,C : integer;<br><br>
+                                    begin<br><br>
+                                    //instruções do código<br><br>
+                                    <b>end.</b>
+                                    </h6>
+                                </div>
                         </div>
                         <!--------------READLN-------------->
                         <div class="f" id="readln">
 
                             <h1>Readln</h1>
-                            <p> A sintaxe <b>readln</b> permite a entrada de variaveis digitadas pelo teclado.
-                                 Como exemplo
-                                 <br><br> begin<br> var <br> nome : string;<br><b>readln(nome)</b>;<br>end.</p>
+                            <p> A sintaxe <b>readln</b> permite a entrada de 
+                                variáveis digitadas pelo teclado e pula para a próxima linha no terminal.
+                                Caso não precise pular a linha pode ser escrita dessa maneira <b>read</b>.
+                                
+                                <div class="codigos">
+                                    <h6>
+                                    program SOMA_NUMERO;<br><br>
+                                    var <br><br>
+                                    nome : string;<br><br>
+                                    begin<br><br>
+                                    <b>Readln(nome)</b><br><br>
+                                    //também pode ser escrita dessa maneira<br>
+                                    //<b>Read(nome)</b><br><br>
+                                    end.
+                                    </h6>
+                                </div>
                             
 
                         </div>
@@ -144,78 +175,271 @@
                         <div class="f" id="writeln">
                             
                             <h1>Writeln</h1>
-                            <p> A sintaxe <b>writeln</b> imprime as variaveis. 
-                                Como exemplo
-                                 <br><br> begin<br> var <br> nome : string;
-                                 <br>readln(nome);<br><b>writeln(nome)</b><br>
-                                 end.<br><br>
-                                 <b>Resultado: Nome digitado</b></p>
+                            <p> A sintaxe <b>writeln</b> imprime as variáveis no terminal e em seguida pula de linha.
+                                Caso não seja necessário pular a linha após imprimir a variável a sintaxe pode ser escrita dessa maneira <b>write</b>
+                                Como exemplo:
+                                <div class="codigos">
+                                    <h6>
+                                    program SOMA_NUMERO;<br><br>
+                                    var <br><br>
+                                    nome : string;<br><br>
+                                    begin<br><br>
+                                    readln(nome)<br>
+                                    <b>writeln(nome)</b><br><br>
+                                    //também pode ser escrito dessa maneira<br>
+                                    //<b>write(nome)</b><br><br>
+                                    end.
+                                    </h6>
+                                </div>
 
                         </div>
                         <!----------------IF---------------->
                         <div class="f" id="if">
                             <h1>If</h1>
-                            <p> A sintaxe <b>if</b> é o desvio de código conforme a condição lógica. De exemplo:
-                             <br><br><b>if</b> x < y then<br>  writeln(x);</p>
+                            <p> A sintaxe <b>if</b> tem por finalidade tomar uma decisão.
+                                Ela toma a decisão apartir da condição imposta. A instrução de decisão no pascal 
+                                pode ser encontrada na forma simples e de forma composta, dessa forma:<br> <br>
+                                <b>if</b> (condição) <b>then</b> //Estrutura simples<br>
+                                <b>if</b> (condição) <b>then</b> <b>else</b> //Estrutura composta<br><br>
+                            </p>
+                            <P>Estrutra simples como exemplo:</P>
+                            <div class="codigos">
+                                <h6>
+                                program Sintaxe_if;<br><br>
+                                var <br><br>
+                                x : integer;<br><br>
+                                begin<br><br>
+                                x :=10
+                                if (x >= 10) then<br>
+                                writeln(“O valor da variavel X e 10”);<br><br>
+                                end.
+                                </h6>
+                            </div>
+                            <P>Estrutra composta como exemplo:</P>
+                            <div class="codigos">
+                                <h6>
+                                program Sintaxe_if2;<br><br>
+                                var <br><br>
+                                x : integer;<br><br>
+                                begin<br><br>
+                                x := 1;
+                                if (x > 10) then<br>
+                                begin<br>
+                                writeln(“O valor da variavel X e 10”);<br>
+                                end<br>
+                                else<br>
+                                begin<br>
+                                writeln(“O valor da variavel X nao e 10”);<br>
+                                end;<br><br>
+                                end.
+                                </h6>
+                            </div>
                         </div>
+
+
                         <!---------------------------------->
 
-                        <!-------------THEN----------------->
-                        <div class="f" id="then">          
-
-                            <h1>Then</h1><p> A sintaxe <b>then</b> é  utilizada na sintaxe para indicar o bloco de código que será executado. 
-                                Como exemplo <br><br>if x < y <b>then</b><br>  writeln(x);</p>
-
-                        </div>
-                        <!---------------------------------->
-
-                        <!---------------AND---------------->
-                        <div class="f" id="and">
-
-                            <h1>And</h1><p> Operador lógico <b>and</b> utilizado em codições lógicas. </p>
-
-                        </div>
-                        <!---------------------------------->
-
-                        <!---------------XOR---------------->
-                        <div class="f" id="xor">
-                            <h1>Xor</h1><p> Operador lógico ou exclusivo <b>xor</b> utilizado em codições lógicas. </p>
-                        </div>
-                        <!---------------------------------->
-
-                        <!---------------OR----------------->
-                        <div class="f" id="or">
-                            <h1>Or</h1><p> Operador lógico <b>or</b> utilizado em codições lógicas. </p>
+                        <!----------OPERADORES-------------->
+                        <div class="f" id="operadores">
+                            <h1>Tipos de operadores</h1>
+                            <p>
+                                Em pascal existem diversos operadores, tais como:
+                            </p>
+                            <div class="atributos">
+                                <h5>Operador de atribuição</h5>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                program NOME;<br><br>
+                                var <br><br>
+                                nome : string;<br><br>
+                                begin<br><br>
+                                readln(nome)<br>
+                                nome <b>:=</b> 'Emanuel';<br><br>
+                                end.
+                                </h6>
+                            </div>
+                            <div class="atributos">
+                                <h5>Operador Aritméticos</h5>
+                                <p>Subtração é o sinal de menos <b>-</b></p>
+                                <p>Adição é o sinal de mais <b>+</b></p>
+                                <p>Multiplicação é asterisco <b>*</b></p>
+                                <p>Divisão real é a barra <b>/</b></p>
+                                <p>Divisão inteira <b>div</b></p>
+                                <p>Resto da divisão <b>mod</b></p>
+                                <p>Inverte Sinal <b>-</b></p>
+                                <p>Mantém sinal <b>+</b></p><br>
+                                <p>Como exemplo:</p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                program SOMA_NUMERO;<br><br>
+                                var <br><br>
+                                A, B : integer;<br>
+                                C, D : real;<br><br>
+                                begin<br><br>
+                                A := 1;<br>
+                                B := 3;<br>
+                                C := 5;<br>
+                                D := 10;<br>
+                                A := 1 + B;<br>
+                                A := B + D; { errado, D é real }<br>
+                                B := 10 div 3;<br>
+                                A := 10 mod 3;<br>
+                                C := D / C;<br>
+                                D := 10 div C; { errado, o operado div é só para
+                               inteiros }<br>
+                                A := -1;<br>
+                                B := 5 + A;<br>
+                                B := -A;<br>
+                                C := D * A;<br>
+                                B := C * B; { errado, C é real }<br><br>
+                                end.
+                                </h6>
+                            </div>
+                            <div class="atributos">
+                                <h5>Operador de concatenação</h5>
+                                <p>
+                                    O operador de concatenação faz a junção de duas variáveis do tipo string. Como exemplo:
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                program JUNTANOME;<br><br>
+                                var <br><br>
+                                Primeironome, SobreNome, NomeCompleto : string;<br><br>
+                                begin<br><br>
+                                Primeironome := ´Emanuel´;<br>
+                                SobreNome := ´Zaveruka´;<br><br>
+                                NomeCompleto := PreNome <b>+</b> SobreNome;<br>
+                                writeln( NomeCompleto );<br><br>
+                                end.
+                                </h6>
+                            </div>
+                            <div class="atributos">
+                                <h5>Operador Relacionais</h5>
+                                <p> Os operadores relacionais são utilizados para fazer
+                                    comparações entre os dados de mesmo tipo
+                                </p>
+                                <p>Os operadores exitentes em pascal são:</p>
+                                <p>Maior que <b>></b></p>
+                                <p>Menor que <b><</b></p>
+                                <p>Maior ou igual <b>>=</b></p>
+                                <p>Menor ou igual <b><=</b></p>
+                                <p>igual <b>=</b></p>
+                                <p>Diferente <b><></b></p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                program COMPARA_NOTA;<br><br>
+                                var <br><br>
+                                Nota1, Nota2 : real;<br>
+                                NomeAluno1, NomeAluno2 : string;<br>
+                                A, B, C : integer;<br><br>
+                                begin<br><br>
+                                A := 2;<br>
+                                B := 3;<br>
+                                C := 1;<br>
+                                if B = A + C then<br>
+                                writeln( B );<br>
+                                Nota1 := 5.0;<br>
+                                Nota2 := 10.0;<br>
+                                if Nota1 < Nota2 then<br>
+                                writeln( Nota1 );<br>
+                                NomeAluno1 := ´Maria Jose´;<br>
+                                NomeAluno2 := ´MariaJose´;<br>
+                                if NomeAluno1 < NomeAluno2<br><br>
+                                end.
+                                </h6>
+                            </div>                            
+                            <div class="atributos">
+                                <h5>Operadores lógicos</h5>
+                                <p>Operadores lógicos são utilizados para se analisar
+                                    duas ou mais expressões interrelacionadas.
+                                </p>
+                                <h5>And</h5>
+                                <p> Operador lógico <b>and</b> utilizado em codições lógicas. </p>
+                                <h5>Xor</h5>
+                                <p> Operador lógico ou exclusivo <b>xor</b> utilizado em codições lógicas. </p>
+                                <h5>Or</h5>
+                                <p> Operador lógico <b>or</b> utilizado em codições lógicas. </p>
+                                <p>Como exemplo:</p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                program COMPARA_NOTA;<br><br>
+                                var <br><br>
+                                Nota1, Nota2 : real;
+                                NomeAluno1, NomeAluno2 : string;
+                                A, B, C : integer;<br><br>
+                                begin<br><br>
+                                A := 2;<br>
+                                B := 3;<br>
+                                C := 1;<br>
+                                NomeAluno1 := ´Maria Jose´;<br>
+                                NomeAluno2 := ´MariaJose´;<br>
+                                if ( B = A + C ) and ( NomeAluno1 <> NomeAluno2 ) then<br>
+                                writeln( NomeAluno1, B );<br>
+                                if ( A = C ) or ( NomeAluno1 = NomeAluno2 ) then<br>
+                                writeln( NomeAluno1 );<br><br>
+                                end.
+                                </h6>
+                            </div>   
                         </div>
                         <!---------------------------------->
 
                         <!---------------FOR---------------->
                         <div class="f" id="for">
 
-                            <h1>For</h1><p> A sintaxe <b>for</b> 
-                                cria um laço, nela se faz necessário informar a quatidade de laços que se deseja dar. 
-                                De exemplo <br><br> <b>for </b> variavel = <inicio de contagem> to <fim de contagem> do 
-                                <br> begin <br> código que irá compilar; <br> end;</p>
-
+                            <h1>For</h1>
+                            <p> O comando <b>for</b> executa repetitivamente os comandos
+                                que estiverem em seu bloco de execução, a cada repetição ele atribuí
+                                um valor a variável de controle.
+                            </p>
+                            <div class="codigos">
+                                <h6>
+                                program LACODEREPETICAO;<br><br>
+                                var <br><br>
+                                variavel: integer;<br><br>
+                                begin<br><br>
+                                for variavel := &ltinício> to/downto &ltfim> do<br>
+                                    begin<br>
+                                    instrução1;<br>
+                                    instrução2;<br>
+                                    instrução3;<br>
+                                    end;<br><br>
+                                end.
+                                </h6>
+                            </div>
                         </div>
+                        
                         <!---------------------------------->
 
                         <!-------------WHILE---------------->
                         <div class="f" id="while">
 
-                            <h1>While</h1><p> A sintaxe <b>while</b> cria um laço, nela não se faz necessário informar a quatidade de laços que se deseja dar. 
-                                Para que o laço pare, se faz necessário o uso de uma condição. Como exemplo
-                                 <br><br> <b>while</b> x<y (condição) do <br> begin <br> x = x + 1; <br> end;</p>
-
+                            <h1>While</h1>
+                            <p> O comando <b>while</b> é uma estrutra de repetição cujo sua 
+                                característica é efetuar o teste lógico para efetuar a repetição
+                                enquanto a condição lógica não for verdadeira a repetição continua
+                            </p>
+                            <p>Como exemplo</p>
+                            <div class="codigos">
+                                <h6>
+                                program LACODEREPETICAO;<br><br>
+                                var <br><br>
+                                variavel: integer;<br><br>
+                                begin<br><br>
+                                while (condição) do<br>
+                                    begin<br>
+                                     //instruções para condição verdadeira;<br>
+                                    end;<br><br>
+                                end.
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
 
-                        <!----------------DO---------------->
-                        <div class="f" id="do">
-                            <h1>Do</h1><p> A sintaxe <b>do</b>
-                                 é amplamente utilizada em vários comandos, indicando o início do código a ser executado</p>
-                        </div>
-                        <!---------------------------------->
                     </div>
                     <!--CONTEUDO-->
             </section>

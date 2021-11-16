@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../../StylesSheet/styles.css">
         <link rel="stylesheet" href="../../../StylesSheet/stylescontent.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/a11y-dark.min.css">
         <link rel='icon' type='image/png' href="../../../images/icontitle.png">
         <title>Manoel Syntax</title>
     </head>
@@ -18,27 +19,13 @@
                   <button id="head">head</button>
                   <button id="title">title</button>
                   <button id="body">body</button>
-                  <button id="bgcolor">bgcolor</button>
-                  <button id="background">background</button>
-                  <button id="h">h</button>
-                  <button id="b">b</button>
-                  <button id="i">i</button>
-                  <button id="u">u</button>
-                  <button id="sup">sup</button>
-                  <button id="sub">sub</button>
-                  <button id="pre">pre</button>
-                  <button id="p">p</button>
-                  <button id="font">font</button>
+                  <button id="textos">textos em html</button>
                   <button id="br">br</button>
                   <button id="hr">hr</button>
                   <button id="img">img</button>
                   <button id="a">a</button>
-                  <button id="ol">ol</button>
-                  <button id="table">table</button>
-                  <button id="caption">caption</button>
-                  <button id="td">td</button>
-                  <button id="th">th</button>
-                  <button id="tr">tr</button>
+                  <button id="listas">listas</button>
+                  <button id="table">tabelas</button>
                 </div>
             </nav>
         </div>
@@ -75,27 +62,13 @@
                     <button id="head">head</button>
                     <button id="title">title</button>
                     <button id="body">body</button>
-                    <button id="bgcolor">bgcolor</button>
-                    <button id="background">background</button>
-                    <button id="h">h</button>
-                    <button id="b">b</button>
-                    <button id="i">i</button>
-                    <button id="u">u</button>
-                    <button id="sup">sup</button>
-                    <button id="sub">sub</button>
-                    <button id="pre">pre</button>
-                    <button id="p">p</button>
-                    <button id="font">font</button>
+                    <button id="textos">textos em html</button>
                     <button id="br">br</button>
                     <button id="hr">hr</button>
                     <button id="img">img</button>
                     <button id="a">a</button>
-                    <button id="ol">ol</button>
-                    <button id="table">table</button>
-                    <button id="caption">caption</button>
-                    <button id="td">td</button>
-                    <button id="th">th</button>
-                    <button id="tr">tr</button>
+                    <button id="listas">listas</button>
+                    <button id="table">tabelas</button>
                 </div>
             </nav>
             <!--BOTÕES DO MENU LATERAL-->
@@ -110,120 +83,344 @@
                             <p>Todo o documento HTML fica contido entre os TAGS: &ltHTML&gt e &lt/HTML&gt.
                                 Uma página HTML possui três partes básicas: estrutura principal, um cabeçalho e um corpo de página.
                             </p>
-                            <xmp>
-                                <html> <!--Estrutura principal-->
-
-                                </html> <!--Estrutura principal-->
-                            </xmp>
+                            <div class="codigos">
+                                <h6>
+                                &lt!--isso é um comentário em html--&gt <br>
+                                <b>&lthtml&gt</b>  &lt!--estrutura principal--&gt <br>
+                                <b>&lt/html&gt</b> &lt!--fim de estrutura principal--&gt
+                                </h6>
+                            </div>
                         </div>
                         <!--------------------------------->
                         <!------------HEAD----------------->
                         <div id="head">
                             <h1>< HEAD ></h1>
-                            <p>Usado para indicar parâmetros de configuração do documento,
-                                também utilizado para exibir o título na barra de títulos do browser.
+                            <p>É o cabeçalho da estrutura do html é especialmente utilizado 
+                                para o carregamento de arquivos ou metadados, como links de css.
                             </p>
+                            <div class="codigos">
+                                <h6>
+                                &lt!--Head é o cabeçalho--&gt <br>
+                                &lthtml&gt  &lt!--estrutura principal--&gt <br><br>
+                                <b>&lthead&gt</b>  &lt!--cabeçalho da estrutura--&gt <br><br>
+                                &ltmeta charset="utf-8"> <br>
+                                &ltlink el="stylesheet" href="estilos.css"&gt  <br><br>
+                                <b>&lt/head&gt</b> &lt!--cabeçalho da estrutura--&gt <br><br>
+                                &lt/html&gt &lt!--fim de estrutura principal--&gt
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
                         <!------------TITLE----------------->
                         <div id="title">
                             <h1>< TITLE ></h1>
-                            <p>Indica o título do documento para o browser.
+                            <p>Indica o título da estrutura html.
                                 Esta TAG deve estar sempre dentro das TAGs &ltHEAD&gt  &lt/HEAD&gt.
                             </p>
+                            <div class="codigos">
+                                <h6>
+                                &lt!--Title define o nome da estrutura--&gt <br>
+                                &lthtml&gt  <br><br>
+                                &lthead&gt  &lt!--cabeçalho da estrutura--&gt <br><br>
+                                <b>&lttitle></b> Nome de minha página <b>&lt/title></b> <br> <br>
+                                &lt/head&gt  &lt!--cabeçalho da estrutura--&gt <br><br>
+                                &lt/html&gt 
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
                         <!-------------BODY----------------->
                         <div id="body">
                             <h1>< BODY ></h1>
-                            <p>Envolvem a seção de corpo do documento.
-                                Aqui fica o conteúdo principal da Home Page.
+                            <p>A tag body é onde todo o conteudo da estrutura html vai ficar todo texto
+                                tabelas, imagens, etc. Sua sintaxe é dessa forma.
                             </p>
-                        </div>
-                        <!--------------BGCOLOR------------->
-                        <div id="bgcolor">
-                            <h1>< BGCOLOR ></h1>
+                            <div class="codigos">
+                                <h6>
+                                &lt!--Body é o conteúdo--&gt <br>
+                                &lthtml&gt  &lt!--estrutura principal--&gt <br><br>
+                                &lthead&gt  &lt!--cabeçalho da estrutura--&gt <br>
+                                &lt/head&gt &lt!--cabeçalho da estrutura--&gt <br><br>
+                                <b>&ltbody&gt</b>&lt!--Conteúdo da estrutura--&gt<br><br>
+                                &lt!--Conteúdo da página--&gt<br><br>
+                                <b>&lt/body&gt</b>&lt!--Fim da estrutura--&gt<br><br>
+                                &lt/html&gt &lt!--fim de estrutura principal--&gt
+                                </h6>
+                            </div>
+                            <div class="atributos">
+                            <!--------------BGCOLOR------------->
+                            <h1>Atributos da tag < BODY ></h1>
+                            <h5>< BGCOLOR ></h5>
                             <p>O atributo Bgcolor é usado para estabelecer cor de plano de fundo
                                 em um parágrafo, tabela ou qualquer outra parte do HTML.
                             </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                &lt!--Bgcolor é o atributo--&gt <br>
+                                &lthtml&gt<br><br>
+                                &lthead&gt<br>
+                                &lthead&gt<br><br>
+                                &lt!--O atributo fica na tag body--&gt<br>
+                                &ltbody <b>bgcolor</b>=black&gt<br><br>
+                                &lt!--Conteúdo da página--&gt<br><br>
+                                &lt/body&gt&lt!--Fim do conteúdo--&gt<br><br>
+                                &lt/html&gt
+                                </h6>
+                            </div>
+                            <!---------------------------------->
+                            <!-----------BACKGROUND------------->
+                            <div class="atributos">
+                                <h5>< BACKGROUND ></h5>
+                                <p>A propriedade Background permite que você controle a cor do plano de fundo de
+                                    um elemento, configure uma imagem como plano de fundo, e posicione uma imagem em uma página.
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                &lt!--Bgcolor é o atributo--&gt <br>
+                                &lthtml&gt<br><br>
+                                &lthead&gt<br>
+                                &lthead&gt<br><br>
+                                &lt!--O atributo fica na tag body--&gt<br>
+                                &ltbody <b>background</b>="imagem.jpg"&gt<br><br>
+                                &lt!--Conteúdo da página--&gt<br><br>
+                                &lt/body&gt&lt!--Fim do conteúdo--&gt<br><br>
+                                &lt/html&gt
+                                </h6>
+                            </div>
+                            <!---------------------------------->
                         </div>
-                        <!---------------------------------->
-                        <!-----------BACKGROUND------------->
-                        <div id="background">
-                            <h1>< BACKGROUND ></h1>
-                            <p>A propriedade Background permite que você controle a cor do plano de fundo de
-                                um elemento, configure uma imagem como plano de fundo, e posicione uma imagem em uma página.
+                        <!----------------Textos----------------->
+                        <div id="textos">
+                            <h1>
+                                Textos em html
+                            </h1>
+                            <p>
+                                Existem diversas tags em html para definir as propriedades dos
+                                textos, as tags são então:
                             </p>
-                        </div>
-                        <!----------------H----------------->
-                        <div id="h">
-                            <h1>< H1 ></h1>
-                            <p>As tags &lth1&gt e &lth6&gt são usadas para definir cabeçalhos HTML.
-                                <br><br>
-                            <h1 class='x'>Conteúdo em &lth1&gt</h1>
-                            <h2>Conteúdo em &lth2&gt</h2>
-                            <h3>Conteúdo em &lth3&gt</h3>
-                            <h4>Conteúdo em &lth4&gt</h4>
-                            <h5>Conteúdo em &lth5&gt></h5>
-                            <h6>Conteúdo em &lth6&gt</h6>
-                            </p>
-                        </div>
-                        <!---------------------------------->
-                        <!---------------B------------------>
-                        <div id="b">
-                            <h1>< B ></h1>
-                            <p>&ltb&gt &lt/b&gt Aplica o estilo <b>negrito</b>.</p>
-                        </div>
-                        <!---------------------------------->
-                        <!---------------I------------------>
-                        <div id="i">
-                            <h1>< I ></h1>
-                            <p>&lti&gt &lt/i&gt Aplica o estilo <i>itálico</i>.</p>
-                        </div>
-                        <!---------------------------------->
-                        <!---------------U------------------>
-                        <div id="u">
-                            <h1>< U ></h1>
-                            <p>&ltu&gt &lt/u&gt Aplica o estilo <u>sublinhado</u>.</p>
-                        </div>
-                        <!---------------------------------->
-                        <!---------------SUP----------------->
-                        <div id="sup">
-                            <h1>< SUP ></h1>
-                            <p>&ltsup&gt &lt/sup&gt Faz com que o texto fique <sup>sobrescrito</sup>.</p>
-                        </div>
-                        <!---------------------------------->
-                        <!---------------SUB---------------->
-                        <div id="sub">
-                            <h1>< SUB ></h1>
-                            <p>&ltsub&gt &lt/sub&gt Faz com que o texto fique 
-                                <sub>subscrito</sub>.
-                            </p>
-                        </div>
-                        <!---------------------------------->
-                        <!--------------PRE----------------->
-                        <div id="pre">
-                            <h1>< PRE ></h1>
-                            <p>&ltpre&gt &lt/pre&gt 
-                            <pre>Utiliza a pré-formatação, ou seja, deixa o texto da maneira em que foi digitado.</pre>
-                            </p>
-                        </div>
-                        <!---------------------------------->
-                        <!----------------P----------------->
-                        <div id="p">
-                            <h1>< P ></h1>
-                            <p>&ltp&gt &lt/p&gt A TAG responsável pela quebra de parágrafos é a &ltp&gt que finaliza
-                                o parágrafo e insere automaticamente uma linha em branco entre parágrafos.
-                            </p>
-                        </div>
-                        <!---------------------------------->
-                        <!--------------FONT---------------->
-                        <div id="font">
-                            <h1>< FONT ></h1>
-                            <p>Para inserir em sua página um texto com fontes de tamanhos,
-                                cores e tipos diferentes utilizamos a TAG &ltFONT&gt ... &lt/FONT&gt
-                            </p>
-                        </div>
+                            <!----------------FONT--------------------->
+                            <div class="atributos">
+                                <h5>< FONT ></h5>
+                                <p>Para inserir fonte diferenciada no html pode ser usado a tag &ltfont>
+                                    nela você pode definir cor, o tipo de fonte a ser utlizada e também seu tamanho.
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--font define a fonte--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt!--Size define o tamanho do texto--&gt <br><br>       
+                                        &ltfont <b>size="3"</b>&gt <br><br>
+                                        O conteúdo dentro da tag<br><br>
+                                        &lt/font&gt &lt!--deve ser fechada--&gt <br><br>
+                                        &lt/body&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                    &lthtml&gt<br><br>
+                                    &lthead&gt<br>
+                                    &lthead&gt<br><br>
+                                    &ltbody&gt<br><br>
+                                    &lt!--Color define a cor do texto--&gt <br><br>       
+                                    &ltfont <b>color="red"</b>&gt <br><br>
+                                    O conteúdo dentro da tag<br><br>
+                                    &lt/font&gt &lt!--deve ser fechada--&gt <br><br>
+                                    &lt/body&gt<br><br>
+                                    &lt/html&gt
+                                </h6>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                    &lthtml&gt<br><br>
+                                    &lthead&gt<br>
+                                    &lthead&gt<br><br>
+                                    &ltbody&gt<br><br>
+                                    &lt!--Face define o tipo da fonte--&gt <br><br>       
+                                    &ltfont <b>face="verdana"</b>&gt <br><br>
+                                    O conteúdo dentro da tag<br><br>
+                                    &lt/font&gt &lt!--deve ser fechada--&gt <br><br>
+                                    &lt!--Todos os atributos juntos--&gt <br><br>       
+                                    &ltfont <b>size="3"</b> <b>color="red"</b> <b>face="verdana"</b>&gt <br><br>
+                                    O conteúdo dentro da tag<br><br>
+                                    &lt/font&gt &lt!--deve ser fechada--&gt <br><br>
+                                    &lt/body&gt<br><br>
+                                    &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                            <!--------------------H-------------------->
+                            <div class="atributos">
+                                <h5>< H ></h5>
+                                <p>As tags da &lth1&gt até &lth6&gt são usadas para definir cabeçalhos
+                                    de diferentes tamanhos no documento html.
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--H define titulos--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&lth5&gt</b> &lt!--Essa tag deve ser aberta--&gt<br><br>
+                                        O conteúdo dentro da tag fica em destaque<br><br>
+                                        <b>&lt/h5&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                            <!--------------------B-------------------->
+                            <div class="atributos">
+                                <h5>< B ></h5>
+                                <p>Aplica o estilo negrito no texto.</p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--b deixa em negrito--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&ltb&gt</b> &lt!--Essa tag deve ser aberta--&gt<br><br>
+                                        O conteúdo dentro da tag fica em negrito<br><br>
+                                        <b>&lt/b&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                            <!--------------------I-------------------->
+                            <div class="atributos">
+                                <h5>< I ></h5>
+                                <p>Deixa o conteúdo em italico</p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--i deixa em italico--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&lti&gt</b> &lt!--Essa tag deve ser aberta--&gt<br><br>
+                                        O conteúdo dentro da tag fica em italico<br><br>
+                                        <b>&lt/i&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                            <!--------------------U-------------------->
+                            <div class="atributos">
+                                <h5>< U ></h5>
+                                <p>Deixa o conteúdo sublinhado.</p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--Deixa o texto sublinhado--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&ltu&gt</b> &lt!--Essa tag deve ser aberta--&gt<br><br>
+                                        O conteúdo dentro da tag fica sublinhado<br><br>
+                                        <b>&lt/u&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                            <!--------------------SUP------------------>
+                            <div class="atributos">
+                                <h5>< SUP ></h5>
+                                <p>Faz com que o texto fique sobrescrito.</p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--Deixa o conteúdo sobrescrito--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&ltsup&gt</b> &lt!--Essa tag deve ser aberta--&gt<br><br>
+                                        O conteúdo dentro da tag fica sobrescrito<br><br>
+                                        <b>&lt/sup&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                            <!-------------------SUB------------------->
+                            <div class="atributos">
+                                <h5>< SUB ></h5>
+                                <p> Faz com que o texto fique subscrito.
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--Deixa o conteúdo subscrito--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&ltsub&gt</b> &lt!--Essa tag deve ser aberta--&gt<br><br>
+                                        O conteúdo dentro da tag fica em destaque<br><br>
+                                        <b>&lt/sub&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                            <!-------------------PRE------------------->
+                            <div class="atributos">
+                                <h5>< PRE ></h5>
+                                <p>o texto fica na maneira em que foi digitado no documento.
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--Deixa o conteúdo da forma original--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&ltpre&gt</b> &lt!--Essa tag deve ser aberta--&gt<br><br>
+                                        O conteúdo dentro da tag fica da forma original do documento<br><br>
+                                        <b>&lt/pre&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                            <!---------------------P------------------->
+                            <div class="atributos">
+                                <h5>< P ></h5>
+                                <p>É a tag responsável pela quebra de parágrafos é a que finaliza
+                                    o parágrafo e insere automaticamente uma linha em branco entre parágrafos.
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--P define o parágrafo no texto--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&ltp&gt</b> &lt!--Essa tag deve ser aberta--&gt<br><br>
+                                        O conteúdo dentro da tag fica dentro do parágrafo<br><br>
+                                        <b>&lt/p&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <!----------------------------------------->
+                        </div>   
                         <!---------------------------------->
                         <!----------------BR---------------->
                         <div id="br">
@@ -232,50 +429,217 @@
                                 Finaliza a linha de texto e insere automaticamente uma outra linha em branco.
                                 Não precisa ser finaliza com &lt/BR&gt.
                             </p>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--Br pula de linha--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&ltbr&gt</b> &lt!--Essa tag so é aberta--&gt<br><br>
+                                        O conteúdo dentro da tag <br><br>
+                                        <b>&ltbr&gt</b> <br><br>
+                                        O conteúdo dentro da tag<br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
                         </div>
+                        
                         <!---------------------------------->
                         <!----------------HR---------------->
                         <div id="hr">
                             <h1>< HR ></h1>
-                            <p>Desenha uma linha horizontal no documento.
-                                Não precisa ser finalizada com &lt/HR&gt.
+                            <p>Essa tag desenha uma linha horizontal no documento. Nela pode ser definido os
+                                atributos de cor e de espessura de linha.
+                                A tag não precisa ser finalizada com &lt/HR&gt.
                             </p>
-                            <br>
-                            <hr>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--HR desenha linha horizontal--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        <b>&lthr&gt</b> &lt!--Essa tag so é aberta--&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--HR desenha linha horizontal--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt!--size define a espessura da linha--&gt<br>
+                                        <b>&lthr size="5px"&gt</b><br><br>
+                                        &lt!--color define a cor da linha--&gt<br>
+                                        <b>&lthr color="red"&gt</b><br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
                         <!---------------IMG---------------->
                         <div id="img">
                             <h1>< img src ></h1>
-                            <p>Para inserir uma imagem em uma página web utilizamos o comando,
+                            <p>Para inserir uma imagem em uma página web utilizamos a
                                 tag, &ltimg src='nomedaimagem.jpg'&gt e seus atributos.
-                                Os formatos mais usados são o GIF e o JPG, ambos com compactação de pixels.
+                                Os formatos mais usados são o PNG e o JPG, ambos com compactação de pixels. Nessa mesma tag
+                                podemos definir o tamanho da imagem. Vale resaltar que a tag não é necessário ser fechada com &lt/img&gt
                             </p>
+                            <div class="codigos">
+                                <h6>
+                                    &lt!--img define a imagem--&gt <br>
+                                    &lthtml&gt<br><br>
+                                    &lthead&gt<br>
+                                    &lthead&gt<br><br>
+                                    &ltbody&gt<br><br>
+                                    &lt!--Essa tag só é aberta--&gt<br>
+                                    <b>&ltimg src="nomedaimagem.jpg"&gt</b> <br><br>
+                                    &lt!--Widht define altura e height altura--&gt<br>
+                                    <b>&ltimg src="imagem.jpg" widht=450 heght=450&gt</b> <br><br>
+                                    &ltbody&gt<br><br>
+                                    &lt/html&gt
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
                         <!----------------A---------------->
                         <div id="a">
                             <h1>< A ></h1>
-                            <p>Para linkar as páginas é utilizado a tag &lta href='NomeDoArquivo.extensão'&gt &lt/a&gt 
-                                é necessário especificar o nome do arquivo que será chamado e a sua extensão.
+                            <p>Para linkar páginas é utilizado a tag &lta href='NomeDoArquivo.extensão'&gt &lt/a&gt 
+                                é necessário especificar o nome do link que será chamado e a sua extensão.
                             </p>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--A linka páginas--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt!--href define o caminho--&gt<br>
+                                        &lt!--Essa tag deve ser aberta--&gt<br>
+                                        <b>&lta href="www.google.com"&gt</b> <br><br>
+                                        O conteúdo dentro da tag fica com hiperlink<br><br>
+                                        <b>&lt/a&gt</b> &lt!--E deve ser fechada--&gt <br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
-                        <!----------------OL---------------->
-                        <div id="ol">
-                            <h1>< OL ></h1>
-                            <p>Listas ordenadas são também denominadas listas numeradas,
-                                pois, quando um navegador encontra uma TAG, iniciando uma lista ordenada,
-                                ele passa a mostrar cada item utilizando números, como 1, 2, 3, e assim sucessivamente.
+                        <!-------------LISTAS--------------->
+                        <div id="listas">
+                            <h1>LISTAS</h1>
+                            <p>Existem diversas maneiras de criar listas em html, as tags para a criação são:
                             </p>
+                            <div class="atributos">
+                                <h5>< ol ></h5>
+                                <p>É a tag responsável para a criação da lista, nela pode ser atribuida
+                                    os atributos de formato. Vale resalta que a tag deve ser fechada &lt/ol> 
+                                </p>
+                                <h5>< li ></h5>
+                                <p>
+                                    já a  &ltli> é responsável por cada item da lista não precisa ser fechada.
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--lista ordenada--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt!--Essa tag deve ser aberta--&gt<br>
+                                        <b>&ltol&gt</b> <br><br>
+                                        <b>&ltli></b> O conteúdo fica em lista<br>
+                                        <b>&ltli></b> O conteúdo fica em lista<br>
+                                        <b>&ltli></b> O conteúdo fica em lista<br><br>
+                                        <b>&lt/ol&gt</b> <br>
+                                        &lt!--Essa tag deve ser fechada--&gt<br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
+                            <div class="atributos">
+                                <h5>lista não ordenada</h5>
+                                <p>Nela segue o mesmo padrão para a definição de listas, com a diferença 
+                                    de não ser ordenada e com diferentes símbolos de listas 
+                                </p>
+                                <h5>TYPE</h5>
+                                <p>Define o formato dos símbolos de listas, o nome desses símbolos são,
+                                    disc cujo é um disco, square o marcador é quadrado e circle o marcador é um ponto.
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                        &lt!--lista não ordenada--&gt <br>
+                                        &lthtml&gt<br><br>
+                                        &lthead&gt<br>
+                                        &lthead&gt<br><br>
+                                        &ltbody&gt<br><br>
+                                        &lt!--Essa tag deve ser aberta--&gt<br>
+                                        &ltol <b>type="disc"</b>&gt <br><br>
+                                        &ltli> O conteúdo fica em lista<br>
+                                        &ltli> O conteúdo fica em lista<br>
+                                        &ltli> O conteúdo fica em lista<br><br>
+                                        &lt/ol&gt <br>
+                                        &lt!--Essa tag deve ser fechada--&gt<br>
+                                        &ltbody&gt<br><br>
+                                        &lt/html&gt
+                                </h6>
+                            </div>
                         </div>
                         <!---------------------------------->
                         <!-------------TABLE--------------->
                         <div id="table">
-                            <h1>< TABLE ></h1>
-                            <p>A TAG &ltTABLE&gt é utilizada para a representação de dados tabulares. A estrutura e o conteúdo da tabela devem ficar dentro das TAGs
-                            <center>
-                                <br> <br> &ltTABLE BORDER &gt  
+                            <h1>TABELAS</h1>
+                            <p>
+                                As tabelas em html possuem diversas tags para serem constítuidas tais como:
+                            </p>
+                            <div class="atributos">
+                            <h5>< TABLE ></h5>
+                            <p>A TAG &ltTABLE&gt é utilizada para a representação de dados tabulares.
+                                 A estrutura e o conteúdo da tabela devem ficar dentro das TAGs
+                            </p>
+                            </div>
+                            <div class="atributos">
+                                <h5>< CAPTION ></h5>
+                                <p>A TAG &ltCAPTION&gt especifica o título de uma tabela.</p>
+                            </div>
+                            <div class="atributos">
+                                <h5>< TD ></h5>
+                                <p>A TAG &ltTD&gt especifica a células de dados de uma tabela.
+                                    Por se tratar de dados comuns (e não cabeçalhos),
+                                    essas células possuem seu conteúdo escrito em fonte normal, 
+                                    sem nenhum destaque e alinhamento à esquerda.
+                            </div>
+                            <div class="atributos">
+                                <h5>< TH ></h5>
+                                <p>A TAG &ltTH&gt é usada para especificar as células de cabeçalho da tabela.
+                                    Essas células são diferentes das outras, pois seu conteúdo aparece geralmente em negrito.
+                                </p>
+                            </div>
+                            <div class="atributos">
+                                <h5>< TR ></h5>
+                                <p>A TAG &ltTR&gt indica o início de uma linha na tabela. 
+                                    Cada linha da tabela pode conter várias células, e, portanto, 
+                                    é necessário que se faça uso de uma marcação que indique exatamente o 
+                                    ponto de quebra de uma linha e início de outra.
+                                </p>
+                            </div>
+                            <div class="codigos">
+                                <h6>
+                                &lt!--tabela--&gt <br>
+                                &lthtml&gt<br><br>
+                                &lthead&gt<br>
+                                &lthead&gt<br><br>
+                                &ltbody&gt<br><br>
+                                &ltTABLE BORDER &gt  
                                 <br>  &ltcaption&gt tabelas de numeros &lt/caption&gt 
                                 <br> &ltTD&gt Números&lt/TD&gt 
                                 <br> &ltTH&gt1&lt/TH&gt 
@@ -286,55 +650,12 @@
                                 <br> &ltTH&gt4&lt/TH&gt 
                                 <br> &ltTH&gt5&lt/TH&gt 
                                 <br> &ltTH&gt6&lt/TH&gt 
-                                <br> &lt/TABLE&gt <br> 
-                                <br>  
-                                <TABLE BORDER >
-                                    <caption> tabelas de numeros </caption>
-                                    <TD> Números</TD>
-                                    <TH>1</TH>
-                                    <TH>2</TH>
-                                    <TH>3</TH>
-                                    <TR>
-                                        <TD> Números 2 </TD>
-                                        <TH>4</TH>
-                                        <TH>5</TH>
-                                        <TH>6</TH>
-                                </TABLE>
-                            </center>
-                        </div>
-                        <!---------------------------------->
-                        <!-------------CAPTION------------->
-                        <div id="caption">
-                            <h1>< CAPTION ></h1>
-                            <p>A TAG &ltCAPTION&gt especifica o título de uma tabela.</p>
-                        </div>
-                        <!---------------------------------->
-                        <!----------------TD---------------->
-                        <div id="td">
-                            <h1>< TD ></h1>
-                            <p>A TAG &ltTD&gt especifica a células de dados de uma tabela.
-                                Por se tratar de dados comuns (e não cabeçalhos),
-                                essas células possuem seu conteúdo escrito em fonte normal, 
-                                sem nenhum destaque e alinhamento à esquerda.
-                            </p>
-                        </div>
-                        <!---------------------------------->
-                        <!----------------TH---------------->
-                        <div id="th">
-                            <h1>< TH ></h1>
-                            <p>A TAG &ltTH&gt é usada para especificar as células de cabeçalho da tabela.
-                                Essas células são diferentes das outras, pois seu conteúdo aparece geralmente em negrito.
-                            </p>
-                        </div>
-                        <!---------------------------------->
-                        <!----------------TR---------------->
-                        <div id="tr">
-                            <h1>< TR ></h1>
-                            <p>A TAG &ltTR&gt indica o início de uma linha na tabela. 
-                                Cada linha da tabela pode conter várias células, e, portanto, 
-                                é necessário que se faça uso de uma marcação que indique exatamente o 
-                                ponto de quebra de uma linha e início de outra.
-                            </p>
+                                <br> &lt/TABLE&gt <br> <br>
+                                &ltbody&gt<br><br>
+                                &lt/html&gt
+                                </h6>
+                            </div>
+                            
                         </div>
                         <!---------------------------------->
                     </div>
@@ -345,7 +666,6 @@
          </section>
          </label>
       <script>
-
             //função que abre barra quando clicado no icone
             /*---------------------------------------------------*/
             var checkbox = document.getElementById('checkmobile');
@@ -382,13 +702,14 @@
             closeall();
             
             for(i=0;i<len;i++){
+                
                 menu.children[i].onclick=function(){
                     closeall();
                     all.children[this.id].style.display="block";
-                    
                 }
+
             }
-            
+
             function closeall(){
                 for(i=0;i<all.childElementCount;i++){
                     all.children[i].style.display="none";
